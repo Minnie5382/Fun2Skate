@@ -9,12 +9,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 /* about us 페이지 */
-
 .page_wrap {
+    font-size:16px;
     width:auto;
     height:1300px;
     position:relative;
-    margin:0px 149px 29px 149px;
+    margin:0px 300px 29px 300px;
     background: #FFFFFF;
     background-blend-mode: darken;
     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
@@ -28,7 +28,7 @@
 
 .page .page_title {
     font-family: 'Oleo Script';
-    font-size:50px;
+    font-size:40px;
     position: relative;
     left: 71px;
     top: 75px;
@@ -47,7 +47,6 @@
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
     line-height: 50px;
     letter-spacing: 0.02em;
 
@@ -57,10 +56,10 @@
 
 .content span.Fun2skate {
     font-family: 'Faster One';
-    font-size:27px;
+    font-size:23px;
 }
 
 .content span.LoveNPeace {
     font-family: 'Dancing Script';
-    font-size:50px;
+    font-size:40px;
 }

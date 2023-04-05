@@ -1,5 +1,16 @@
 var submitButton = document.querySelector("button.submit");
 
+$(document).ready(function() {
+  $('#message_box').on('keyup', function() {
+      $('#letter_count').html($(this).val().length);
+
+      if($(this).val().length > 150) {
+          $(this).val($(this).val().substring(0, 150));
+          $('#test_cnt').html("100");
+      }
+  });
+});
+
 
 function submit_alert(){
     alert('Your submission is complete! We\'ll contact you within 24 hours.\n' + 
