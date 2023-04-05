@@ -217,3 +217,9 @@ button {
     line-height: 1.5;
     text-align: center;
 }
+
+/* a 태그 스타일 설정 */
+a {
+    color:#202020;
+    text-decoration:none;
+}
