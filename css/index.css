@@ -1,0 +1,215 @@
+
+/* Skate Lessons 페이지 */
+.page_wrap {
+    width:auto;
+    height:auto;
+    margin:29px;
+    background: #FFFFFF;
+    box-shadow: inset 4px 4px 40px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 150px;
+    padding-bottom:45px;
+}
+
+
+
+/* 페이지 제목 */
+.page .title_wrap {
+    width:auto;
+    height:235px;
+}
+
+.page .page_title {
+    font-family: 'Oleo Script';
+    font-size:50px;
+    position: relative;
+    left: 234px;
+    top: 103px;
+}
+
+
+/* 지도 */
+.location {
+    width:auto;
+    height:719px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+
+}
+
+.map_wrap {
+    position: relative;
+}
+img.map {
+    width:553px;
+    height:719px;
+}
+
+img.pin {
+    width: 28px;
+    height: 46px;
+    background: url(pngwing.png);
+    filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+}
+
+#pin_Seoul {
+    position: absolute;
+    left:165px;
+    top:107px;
+}
+
+#pin_Gangneung {
+    position: absolute;
+    left:354px;
+    top:49px;
+}
+
+/* 모달창 */
+.modal {
+    width:322px;
+    height:433px;
+    background: #FFFFFF;
+    background-blend-mode: darken;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'Overlock';
+
+}
+
+.modal .modal_title_wrap {
+    width:37%;
+    font-size: 27px;
+    margin-top:27px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+}
+
+.modal .loc_instr_list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.modal .member {
+    margin-top:35px;
+}
+
+.modal .member .profile_wrap{
+    display: flex;
+    width:37%;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 25px;
+
+}
+
+.modal img.profile_image {
+    width:50px;
+    height:50px;
+    margin-right: 20px;
+}
+
+/* 강사 목록 */
+.instructors_list {
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.instructors_list .profile_card {
+    position: relative;
+    width: 809px;
+    height:414px;
+    background: #FFFFFF;
+    background-blend-mode: darken;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+    font-family: 'Play';
+    margin: 40px 0;
+}
+
+.instructors_list img.profile {
+    position: absolute;
+    width: 144px;
+    height:144px;
+    left: 53px;
+    top: 53px;
+}
+
+.profile_card .name {
+    font-size: 30px;
+    position: absolute;
+    left: 236px;
+    top:42px;
+    font-weight: bold;
+}
+
+.profile_card .location {
+    font-size: 25px;
+    position: absolute;
+    height: auto;
+    left: 438px;
+    top: 52px;
+}
+
+.profile_card .experience {
+    font-size: 23px;
+    position: absolute;
+    left: 236px;
+    top: 91px;
+}
+
+.profile_card .introducing {
+    font-size: 20px;
+    position: absolute;
+    line-height: 31px;
+    left: 235px;
+    top: 160px;
+    letter-spacing: -0.01em;
+}
+
+.profile_card button.contact {
+    position: absolute;
+    width:160px;
+    left: 50%;
+    top: 78%;
+    transform: translate(-50%);
+}
+
+/* 버튼 공통 스타일 */
+button {
+    font-family: 'Stylish';
+    cursor: pointer;
+    color:black;
+    font-size:27px;
+    background-color:rgba(217, 217, 217, 0.6);
+    border-radius: 0.5px;
+    border:none;
+    padding: 12px 20px;
+}
+
+
+/* 저작권 */
+#copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    left: 0;
+    bottom: 0;
+}
+
+#copyright p {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+}

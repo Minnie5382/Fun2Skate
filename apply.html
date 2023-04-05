@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/공통.css">
+    <link rel="stylesheet" type="text/css" href="css/Apply.css">
+    <title>Apply</title>
+</head>
+<body>
+    <section id="contents">
+        <div class="wrapper">
+            <div class="title">
+                <img onclick= "location.href='./index.html' " src="image/logo_resized.png" alt="" class="logo_img">
+            </div>
+            <div class="intro"> 
+                <div class="en">
+                    <p class="first_phrase">Register as skate teacher and get some bread</p>
+                    <p class="second_phrase">having fun!</p>
+                </div>
+                <div class="ko">
+                    <p>스케이트보드 선생님으로 등록해서 수익을 만드세요!</p>
+                </div>
+                <div class="btn_wrap">
+                        <button onclick= "location.href='./index.html' " class="Find_instructors">Find Instructors</button>
+                        <button onclick= "location.href='./about_us.html' " class="About_Us">About Us</button>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page_wrap">
+                    <div class="title_wrap">
+                        <div class="page_title">Apply</div>
+                    </div>
+                    <div class="content_wrap">
+                        <form class="gform" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbz3WCYOYPiarnjfdVPT9fr8DacnzFJbmJwaQz631W0PY7bGkA1qvyc0m9fk4g5E8BYyMw/exec">
+                            <div class="description">
+                                <p>Fill out the application form below. 
+                                </p>
+                                <p class="ko">아래의 지원서를 작성해주세요. 작성해주신 내용을 기반으로 강사 등록이 됩니다.</p>
+
+                            </div>
+                            <div class="apply_form">
+                                <div class="name">
+                                    <p>
+                                        <span class="en">Name</span>
+                                        <span class="ko">이름</span>
+                                    </p>
+                                    <p>
+                                        <input type="text">
+                                    </p>
+                                </div>
+                                <div class="experience">
+                                    <p>
+                                        <span class="en">Experience (years)</span>
+                                        <span class="ko">경력 (년수)</span>
+                                    </p>
+                                    <p>
+                                        <input type="text">
+                                    </p>
+                                </div>
+                                <div class="profile_image">
+                                    <p>
+                                        <span class="en">Profile Image</span>
+                                        <span class="ko">프로필 이미지</span>
+                                    </p>
+                                    <p>
+                                        <input type="file" class="profile_upload" accept="image/*">
+                                    </p>
+                                </div>
+                                <div class="introducing">
+                                    <p>
+                                        <span class="en">Introducing</span>
+                                        <span class="ko">간략한 소개</span>
+                                    </p>
+                                    <p>
+                                        <input type="text"">
+                                    </p>
+                                    <p class="letter_count">
+                                        <span>0</span>/100
+                                    </p>
+                                </div>
+                                <div class="kakaotalk_id">
+                                    <p>
+                                        <span class="en">Kakao Talk ID</span>
+                                        <span class="ko">카카오톡 ID</span>
+                                    </p>
+                                    <p>
+                                        <input type="text">
+                                    </p>
+                                    <div class="explanation">
+                                        <p class="en">When you receive a lesson request, you will be notified with your KakaoTalk ID.</p>
+                                        <p class="ko">레슨 요청이 수신되면 해당 카카오톡 ID로 알림을 받습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="email">
+                                    <p>
+                                        <span class="en">Email Address</span>
+                                        <span class="ko">이메일 주소</span>
+                                    </p>
+                                    <p>
+                                        <input type="email" name="mail" id="mail" maxlength="30">
+                                        <span id="error_mail" class="result-email result-check"></span>
+                                    </p>
+                                    <div class="explanation">
+                                        <p class="en">You will receive the customer's lesson request at your email address.</p>
+                                        <p class="ko">고객의 레슨 요청서를 해당 이메일 주소로 받습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notice">
+                                <p class="en">It’s run as a cost-free matching platform for now.<br>If you’re registered while it’s free, we won’t charge you for good. </p>
+                                <p class="ko">현재는 무료 서비스 기간입니다. 지금 등록하시면 추후에도 비용이 발생되지 않습니다.</p>
+                            </div>
+                            <div class="submit_btn">
+                                <button class="submit">
+                                    <p>Submit</p>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="copyright">
+        <p>Copyright 2023 Kell. All rights reserved.</p>
+    </footer>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="js/apply.js"></script>
+</body>
+</html>

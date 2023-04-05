@@ -1,0 +1,129 @@
+/* IM Fell English SC */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+/* Fuzzy Bubbles */
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+
+/* Stylish */
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+
+/* Oleo Script */
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+
+/* Overlock */
+@import url('https://fonts.googleapis.com/css2?family=Overlock&display=swap');
+
+/* Play */
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+html, body {
+    display: block;
+    max-width: 1920px;
+    height : 100%;
+    color:#202020;
+}
+
+/* 타이틀 이미지 */
+.title {
+    display:block;
+    width: auto;
+    height: 200px;
+    left: 116px;
+    top: 51px;
+}
+
+.title .logo_img {
+    position: relative;
+    width: 381px;
+    height: 94px;
+    left: 116px;
+    top: 51px;
+}
+
+/* 인트로 페이지 */
+.intro {
+    display:flex;
+    flex-direction: column;
+    width:auto;
+    height:586px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro .first_phrase {
+    font-family: 'IM FELL English SC';
+    font-size: 48px;
+}
+
+.intro .second_phrase {
+    font-family: 'Fuzzy Bubbles';
+    font-size:64px;
+    margin-top:9px;
+}
+
+.intro .ko {
+    font-size: 28px;
+    margin-top: 60px;
+}
+
+/* 탭 */
+.intro .btn_wrap {
+    width:100%;
+    margin-top :160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.intro .btn_wrap * {
+    margin:0 21px;
+    width:100%;
+    width:298px;
+    height:46px;
+    font-family: 'Stylish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 20px;
+    /* or 74% */
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+
+
+/* 페이지 */
+.page {
+    height:auto;
+}
+
+/* 버튼 공통 스타일 */
+button {
+    font-family: 'Stylish';
+    cursor: pointer;
+    color:black;
+    font-size:27px;
+    background-color:rgba(217, 217, 217, 0.6);
+    border-radius: 0.5px;
+    border:none;
+    padding: 12px 20px;
+}
+
+
+/* 저작권 */
+#copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    left: 0;
+    bottom: 0;
+}
+
+#copyright p {
+    margin-top:15px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+}

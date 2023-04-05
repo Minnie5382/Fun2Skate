@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/공통.css">
+    <link rel="stylesheet" type="text/css" href="css/request.css">
+    <title>Request Lessons</title>
+</head>
+<body>
+    <section id="contents">
+        <div class="wrapper">
+            <div class="title">
+                <img onclick= "location.href='./index.html' " src="image/logo_resized.png" alt="" class="logo_img">
+            </div>
+            <div class="intro"> 
+                <div class="en">
+                    <p class="first_phrase">Find your skate masters near you.</p>
+                    <p class="second_phrase">And have fun!</p>
+                </div>
+                <div class="ko">
+                    <p>주변에 있는 스케이트보더를 찾아 연락하고 즐기세요!</p>
+                </div>
+                <div class="btn_wrap">
+                        <button onclick= "location.href='./index.html' " class="Find_instructors">Find Instructors</button>
+                        <button onclick= "location.href='./about_us.html' " class="About_Us">About Us</button>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page_wrap">
+                    <div class="title_wrap">
+                        <div class="page_title">Request Lessons</div>
+                    </div>
+                    <div class="content_wrap">
+                        <form class="gform" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbz3WCYOYPiarnjfdVPT9fr8DacnzFJbmJwaQz631W0PY7bGkA1qvyc0m9fk4g5E8BYyMw/exec">
+                            <div class="description">
+                                <p class="en">Fill out the requestion form below.</p>
+                                <p class="ko">아래의 요청서를 작성해주세요. 작성하신 내용은 강사에게 전달됩니다.</p>
+                            </div>
+                            <div class="request_form">
+                                <div class="name">
+                                    <p>
+                                        <span class="en">Name</span>
+                                        <span class="ko">이름</span>
+                                    </p>
+                                    <p>
+                                        <input name="name" type="text">
+                                    </p>
+                                </div>
+                                <div class="region">
+                                    <p>
+                                        <span class="en">Region</span>
+                                        <span class="ko">레슨 희망 지역</span>
+                                    </p>
+                                    <p>
+                                        <input name="region" type="text">
+                                    </p>
+                                </div>
+                                <div class="date">
+                                    <p>
+                                        <span class="en">Date</span>
+                                        <span class="ko">레슨 시작 희망 날짜</span>
+                                    </p>
+                                    <p>
+                                        <input name="date"type="text">
+                                    </p>
+                                </div>
+                                <div class="message">
+                                    <p>
+                                        <span class="en">Message</span>
+                                        <span class="ko">메시지</span>
+                                    </p>
+                                    <p>
+                                        <input name="message" type="text">
+                                    </p>
+                                    <p class="letter_count">
+                                        <span>0</span>/300
+                                    </p>
+                                </div>
+                                <div class="Kakao Talk ID">
+                                    <p>
+                                        <span class="en">Kakao Talk ID</span>
+                                        <span class="ko">카카오톡 ID</span>
+                                    </p>
+                                    <p>
+                                        <input name="kakao_talk_id" type="text">
+                                    </p>
+                                    <div class="explanation">
+                                        <p class="en">The instructor will contact you directly with the Kakao Talk ID.</p>
+                                        <p class="ko">작성하신 카카오톡 ID로 강사가 직접 연락드립니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="submit_btn">
+                                <button class="submit">
+                                    <p>Submit</p>
+                                </button>
+                            </div>
+                        </form>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="copyright">
+        <p>Copyright 2023 Kell. All rights reserved.</p>
+    </footer>
+    <script type="text/javascript" src="js/request.js"></script>
+</body>
+</html>

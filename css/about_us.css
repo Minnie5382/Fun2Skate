@@ -1,0 +1,66 @@
+
+/* Faster One */
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+
+/* Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
+/* Dancing Script */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* about us 페이지 */
+
+.page_wrap {
+    width:auto;
+    height:1300px;
+    position:relative;
+    margin:0px 149px 29px 149px;
+    background: #FFFFFF;
+    background-blend-mode: darken;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* 페이지 제목 */
+.page .title_wrap {
+    width:auto;
+    height:235px;
+}
+
+.page .page_title {
+    font-family: 'Oleo Script';
+    font-size:50px;
+    position: relative;
+    left: 71px;
+    top: 75px;
+}
+
+
+/* 페이지 내용 */
+.page .content_wrap {
+    position: absolute;
+    width:auto;
+    top:167px;
+    margin:0 90px;
+}
+
+.page .content {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 50px;
+    letter-spacing: 0.02em;
+
+    color: #000000;
+
+}
+
+.content span.Fun2skate {
+    font-family: 'Faster One';
+    font-size:27px;
+}
+
+.content span.LoveNPeace {
+    font-family: 'Dancing Script';
+    font-size:50px;
+}
