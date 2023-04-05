@@ -72,12 +72,12 @@
                                         <span class="en">Message</span>
                                         <span class="ko">메시지</span>
                                     </p>
-                                    <p>
-                                        <input name="message" type="text">
-                                    </p>
-                                    <p class="letter_count">
-                                        <span>0</span>/300
-                                    </p>
+                                    <span>
+                                        <textarea maxlength="150" id="message_box" name="message"></textarea>
+                                    </span>
+                                    <span id="max_letters">
+                                        <span id="letter_count"></span>/150
+                                    </span>
                                 </div>
                                 <div class="Kakao Talk ID">
                                     <p>
@@ -107,6 +107,7 @@
     <footer id="copyright">
         <p>Copyright 2023 Kell. All rights reserved.</p>
     </footer>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="js/request.js"></script>
 </body>
 </html>

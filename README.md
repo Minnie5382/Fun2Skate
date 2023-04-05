@@ -15,7 +15,6 @@ https://www.figma.com/proto/m5fgf23aY5pig6LwHf2XSg/Fun2Skate_prototype_final?nod
 ### 2023.04.03
 - 1. request 페이지 레이아웃 완성
 - 2. apply, request 제출 버튼 클릭 시 작성폼 이메일 전송 구현 중
-- 3. 백까지 만들어야 될 것 같다는 판단 / 우선 기능말고 프론트 먼저 완성을 목표로 함
 
 ### 2023.04.04
 - 1. 이메일/카톡 알림 기능을 위해선 서버까지 만들어야 될 것 같다는 판단 / 우선 기능말고 프론트 먼저 완성을 목표로 함

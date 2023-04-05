@@ -36,7 +36,7 @@ html, body {
     position: relative;
     width: 381px;
     height: 94px;
-    left: 116px;
+    left: 200px;
     top: 51px;
 }
 
@@ -53,21 +53,21 @@ html, body {
 
 .intro .first_phrase {
     font-family: 'IM FELL English SC';
-    font-size: 48px;
+    font-size: 36px;
 }
 
 .intro .second_phrase {
     font-family: 'Fuzzy Bubbles';
-    font-size:64px;
-    margin-top:9px;
+    font-size:49px;
+    margin-top:13px;
 }
 
 .intro .ko {
-    font-size: 28px;
+    font-size: 21px;
     margin-top: 60px;
 }
 
-/* 탭 */
+/* 탭 버튼 */
 .intro .btn_wrap {
     width:100%;
     margin-top :160px;
@@ -79,13 +79,13 @@ html, body {
 .intro .btn_wrap * {
     margin:0 21px;
     width:100%;
-    width:298px;
-    height:46px;
+    width:250px;
+    height:38px;
     font-family: 'Stylish';
     font-style: normal;
     font-weight: 400;
-    font-size: 27px;
-    line-height: 20px;
+    font-size: 23px;
+    line-height: 10px;
     /* or 74% */
     text-align: center;
     letter-spacing: -0.02em;
