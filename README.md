@@ -23,3 +23,7 @@ https://www.figma.com/proto/m5fgf23aY5pig6LwHf2XSg/Fun2Skate_prototype_final?nod
 - 1. 프로젝트 구조 뜯어고침 (워크 디렉토리가 변경되니 commit 기록 다 날라감 야호)
 - 2. 웹 사이즈에 맞게 글자 및 요소 리사이징
 - 3. 글자수 카운트 및 제한 기능 추가
+
+### 2023.04.08
+- 1. 웹 서버, DB 서버 오픈
+- 2. 서버단 개발 시작
