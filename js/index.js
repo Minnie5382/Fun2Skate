@@ -1,6 +1,6 @@
 var contactButton = document.querySelectorAll("button.contact");
-var kell_email_addr = 'minik001@naver.com';
-var lee_email_addr = 'radic7700@gmail.com';
+const modal = document.querySelector("#modal");
+const pin = document.querySelectorAll(".map_wrap img.pin");
 
 function contact_link() {
     getIdByButton();
@@ -33,8 +33,13 @@ for(var i=0 ; i<contactButton.length ; i++) {
 }
 // export { getIdByButton };
 
+function openModal() {
+    modal.style.display = "flex";
+}
 
-
+for(var i=0 ; i<contactButton.length ; i++) {
+    pin[i].addEventListener('click', openModal);
+}
 
 
 // // 이메일 형식 검증 함수
