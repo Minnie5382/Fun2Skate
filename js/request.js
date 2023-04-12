@@ -8,3 +8,24 @@
 //       }
 //   });
 // });
+
+// import {instrIdx} from index.js
+
+
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    var myForm = document.getElementById('form');
+    payload = new FormData(myForm);    
+
+    console.log([...formData]);
+
+    fetch('http://localhost:8080/email', {
+        method: 'POST',
+        body: payload
+      })
+      .then(res => res.json())
+      .then(data => console.log(data));
+  });
+

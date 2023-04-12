@@ -2,43 +2,47 @@ var contactButton = document.querySelectorAll("button.contact");
 const modal = document.querySelector("#modal");
 const pin = document.querySelectorAll(".map_wrap img.pin");
 
-function contact_link() {
-    getIdByButton();
-    window.location.href='./request.html';
-}
 
-function getIdByButton() {
+
+// contact 버튼 클릭 시 강사 id값 구하는 함수
+function getInstrIdxByButton() {
     function retrieveId()  {
         let clicked_button_id = $(this).closest("div.profile_card").attr("id");
         return clicked_button_id;
     }
 
-    function retrieveEmail()  {
-        let clicked_button_email = $(this).closest("div.profile_card").attr("email");
-        return clicked_button_email;
-    }
-
     const instructor_id = retrieveId();
-    const instructor_email = retrieveEmail();
 
-    result_list = [instructor_id, instructor_email];
-    console.log(result_list);
+    console.log(instructor_id);
 
-    return result_list;
+    return instructor_id;
 };
 
-
-for(var i=0 ; i<contactButton.length ; i++) {
-    contactButton[i].addEventListener('click', contact_link);
+function getPinId() {
+    let PIN_ID = $(this).attr("id");
+    return PIN_ID;
 }
-// export { getIdByButton };
 
-function openModal() {
+function openModal(PIN_ID) {
     modal.style.display = "flex";
 }
 
+function contact_link() {
+    var instrIdx = getInstrIdxByButton();
+    window.location.href='./request.html';
+
+    window.instructorIdx = instrIdx;
+    var instrIdx = window.instructorIdx;
+}
+
+export {instrIdx}
+
 for(var i=0 ; i<contactButton.length ; i++) {
     pin[i].addEventListener('click', openModal);
+}
+
+for(var i=0 ; i<contactButton.length ; i++) {
+    contactButton[i].addEventListener('click', contact_link);
 }
 
 
