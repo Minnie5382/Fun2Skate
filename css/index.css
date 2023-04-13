@@ -50,7 +50,7 @@ img.map {
 img.pin {
     width: 20px;
     height: 33px;
-    background: url(pngwing.png);
+    /* background: url(pngwing.png); */
     filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
 }
 

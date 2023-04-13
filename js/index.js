@@ -1,49 +1,66 @@
 var contactButton = document.querySelectorAll("button.contact");
 const modal = document.querySelector("#modal");
 const pin = document.querySelectorAll(".map_wrap img.pin");
+ 
 
+function setCookie(name, value, exp, path, domain) {
+    var date = new Date();
+    date.setTime(date.getTime() + exp*24*60*60*1000); // 일
+    var cookieText=escape(name)+'='+escape(value);
+    cookieText+=(exp ? '; EXPIRES='+exp.toGMTString() : '; EXPIRES='+date.toUTCString());
+    cookieText+=(path ? '; PATH='+cookiePath : '; PATH=/');
+    cookieText+=(domain ? '; DOMAIN='+cookieDomain : '');
+    document.cookie=cookieText;
+}
 
+function getCookie(name) {
+    var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+    return value? unescape(value[2]) : null;
+}
 
-// contact 버튼 클릭 시 강사 id값 구하는 함수
-function getInstrIdxByButton() {
-    function retrieveId()  {
-        let clicked_button_id = $(this).closest("div.profile_card").attr("id");
-        return clicked_button_id;
-    }
+function deleteCookie(name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1999 00:00:10 GMT;';
+}
 
-    const instructor_id = retrieveId();
-
-    console.log(instructor_id);
-
-    return instructor_id;
-};
 
 function getPinId() {
     let PIN_ID = $(this).attr("id");
     return PIN_ID;
 }
 
-function openModal(PIN_ID) {
+function openModal() {
     modal.style.display = "flex";
 }
 
-function contact_link() {
-    var instrIdx = getInstrIdxByButton();
-    window.location.href='./request.html';
-
-    window.instructorIdx = instrIdx;
-    var instrIdx = window.instructorIdx;
+// contact 버튼 클릭 시 강사 id값 구하는 함수
+function getInstrIdxByButton() {
+    var clicked_button_id = $(this).parents("div.profile_card").attr("id");
+    localStorage.setItem("instrIdx", clicked_button_id)
+    console.log("clicked_button_id : " + clicked_button_id);
+    console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
 }
 
-export {instrIdx}
+function contact_link() {
+    getInstrIdxByButton();
+    console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
+    location.href='./request.html';
+}
 
 for(var i=0 ; i<contactButton.length ; i++) {
     pin[i].addEventListener('click', openModal);
-}
+};
 
 for(var i=0 ; i<contactButton.length ; i++) {
-    contactButton[i].addEventListener('click', contact_link);
-}
+    contactButton[i].addEventListener('click', function() {
+        var clicked_button_id = $(this).parents("div.profile_card").attr("id");
+        localStorage.setItem("instrIdx", clicked_button_id)
+        console.log("clicked_button_id : " + clicked_button_id);
+        console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
+
+        location.href='./request.html';
+        console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
+    }) 
+};
 
 
 // // 이메일 형식 검증 함수
