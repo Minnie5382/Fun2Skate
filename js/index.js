@@ -1,37 +1,25 @@
 var contactButton = document.querySelectorAll("button.contact");
-const modal = document.querySelector("#modal");
-const pin = document.querySelectorAll(".map_wrap img.pin");
- 
-
-function setCookie(name, value, exp, path, domain) {
-    var date = new Date();
-    date.setTime(date.getTime() + exp*24*60*60*1000); // 일
-    var cookieText=escape(name)+'='+escape(value);
-    cookieText+=(exp ? '; EXPIRES='+exp.toGMTString() : '; EXPIRES='+date.toUTCString());
-    cookieText+=(path ? '; PATH='+cookiePath : '; PATH=/');
-    cookieText+=(domain ? '; DOMAIN='+cookieDomain : '');
-    document.cookie=cookieText;
-}
-
-function getCookie(name) {
-    var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-    return value? unescape(value[2]) : null;
-}
-
-function deleteCookie(name) {
-    document.cookie = name + '=; expires=Thu, 01 Jan 1999 00:00:10 GMT;';
-}
+var modal = document.querySelector("#modal");
+var pin = $(".map_wrap img.pin");
 
 
 function getPinId() {
-    let PIN_ID = $(this).attr("id");
+    var pin = $(".map_wrap img.pin");
+    var PIN_ID = pin.attr("id");
     return PIN_ID;
 }
 
 function openModal() {
+    var pin_id = getPinId();
+    console.log(pin_id);
+    fetch('http://localhost:8080/instructors/' + pin_id, {
+        method: 'GET'
+      })
+      .then(res => res.json())
+      .then(data => console.log(data));
     modal.style.display = "flex";
 }
-
+/*
 // contact 버튼 클릭 시 강사 id값 구하는 함수
 function getInstrIdxByButton() {
     var clicked_button_id = $(this).parents("div.profile_card").attr("id");
@@ -45,11 +33,31 @@ function contact_link() {
     console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
     location.href='./request.html';
 }
+*/
 
-for(var i=0 ; i<contactButton.length ; i++) {
-    pin[i].addEventListener('click', openModal);
-};
 
+// pin.addEventListener('click',openModal);
+$(function() {
+    $(".map_wrap img.pin").click(function() {
+        var PIN_ID = $(this).attr("id");
+        console.log(PIN_ID);
+        fetch('http://localhost:8080/instructors/' + PIN_ID, {
+            method: 'GET'
+        })
+          .then(res => res.json())
+          .then(data => console.log(data));
+
+        
+        modal.style.display = "flex";
+
+    })
+})
+
+// 해당 지역 핀 클릭 시 강사 목록 API 호출
+
+
+
+// contact 버튼 클릭 시 instrIdx 넘겨주고 request 페이지로 이동
 for(var i=0 ; i<contactButton.length ; i++) {
     contactButton[i].addEventListener('click', function() {
         var clicked_button_id = $(this).parents("div.profile_card").attr("id");
@@ -61,6 +69,7 @@ for(var i=0 ; i<contactButton.length ; i++) {
         console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
     }) 
 };
+
 
 
 // // 이메일 형식 검증 함수

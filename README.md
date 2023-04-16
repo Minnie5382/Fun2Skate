@@ -30,3 +30,6 @@ https://www.figma.com/proto/m5fgf23aY5pig6LwHf2XSg/Fun2Skate_prototype_final?nod
 
 ### 2023.04.13
 - 1. 레슨 요청서 제출 시 강사 이메일로 요청서 전송 기능 추가
+
+### 2023.04.14
+- 1. About Us 내용 문서화
