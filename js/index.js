@@ -19,24 +19,25 @@ function openModal() {
       .then(data => console.log(data));
     modal.style.display = "flex";
 }
-/*
+
 // contact 버튼 클릭 시 강사 id값 구하는 함수
-function getInstrIdxByButton() {
-    var clicked_button_id = $(this).parents("div.profile_card").attr("id");
-    localStorage.setItem("instrIdx", clicked_button_id)
-    console.log("clicked_button_id : " + clicked_button_id);
-    console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
-}
+// function getInstrIdx() {
+//     var clicked_button_id = $("button.contact").parents("div.profile_card").attr("id");
+//     localStorage.setItem('instrIdx', clicked_button_id);
+// }
 
-function contact_link() {
-    getInstrIdxByButton();
-    console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
-    location.href='./request.html';
-}
-*/
+// function contact_link() {
+//     getInstrIdx();
+//     console.log("localStorage.getItem(\"instrIdx\") : " + localStorage.getItem("instrIdx"));
+//     location.href='./request.html';
+// }
+
+// // contact 버튼 클릭 시 instrIdx 넘겨주고 request 페이지로 이동
+// $(function() {
+//     $("button.contact").click(contact_link);
+// });
 
 
-// pin.addEventListener('click',openModal);
 $(function() {
     $(".map_wrap img.pin").click(function() {
         var PIN_ID = $(this).attr("id");
@@ -58,17 +59,18 @@ $(function() {
 
 
 // contact 버튼 클릭 시 instrIdx 넘겨주고 request 페이지로 이동
-for(var i=0 ; i<contactButton.length ; i++) {
-    contactButton[i].addEventListener('click', function() {
+$(function() {
+    $("button.contact").click(function() {
         var clicked_button_id = $(this).parents("div.profile_card").attr("id");
-        localStorage.setItem("instrIdx", clicked_button_id)
+        localStorage.setItem("instrIdx", clicked_button_id);
         console.log("clicked_button_id : " + clicked_button_id);
         console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
 
-        location.href='./request.html';
+        location.href='./request.html#page';
         console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
     }) 
-};
+});
+
 
 
 

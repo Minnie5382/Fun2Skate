@@ -28,7 +28,9 @@ form.addEventListener('submit', (e) => {
       .then(data => console.log(data));
     
     alert("Your submission is complete! \nWe'll contact you within 24 hours.\n제출이 완료되었습니다. 24시간 이내로 연락드리겠습니다.");
-    location.href='./index.html';
+    console.log(localStorage.getItem("instrIdx"));
+    // location.href='./index.html';
+    localStorage.clear();
   
 });
 
