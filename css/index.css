@@ -88,8 +88,10 @@ span.city {
     align-items: center;
 
     font-family: 'Overlock';
+    
 
 }
+
 
 .modal .modal_title_wrap {
     width:37%;
@@ -103,14 +105,24 @@ span.city {
 }
 
 .modal .loc_instr_list {
+    width:210px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: column;
     justify-content: space-evenly;
     align-items: center;
+
+    overflow-y: scroll;
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
 }
 
+.loc_instr_list:hover {
+    overflow: overlay; 
+  }
 
 .modal .member_wrap {
-    margin-top:35px;
+    margin-bottom: 30px;
 }
 
 .modal .member_wrap .profile_wrap{
