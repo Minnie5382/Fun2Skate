@@ -1,3 +1,4 @@
+
 var contactButton = document.querySelectorAll("button.contact");
 var modal = document.querySelector("#modal");
 var pin = $(".map_wrap img.pin");
@@ -45,8 +46,7 @@ $(function() {
         fetch('http://localhost:8080/instructors/' + PIN_ID, {
             method: 'GET'
         })
-          .then(res => res.json())
-          .then(data => console.log(data));
+          .then(res => res.json());
 
         
         modal.style.display = "flex";
@@ -63,15 +63,50 @@ $(function() {
     $("button.contact").click(function() {
         var clicked_button_id = $(this).parents("div.profile_card").attr("id");
         localStorage.setItem("instrIdx", clicked_button_id);
-        console.log("clicked_button_id : " + clicked_button_id);
         console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
 
         location.href='./request.html#page';
-        console.log("localStorage.getItem(\"instrIdx\") : "+ localStorage.getItem("instrIdx"));
     }) 
 });
 
+// 모달창에 클릭한 지역 이름 띄우기
+$(function() {
+    $("img.pin").click(function() {
+        var clicked_pin_city = $(this).attr("id");
+        document.querySelector("span.city").innerHTML = clicked_pin_city;
+    }) 
+});
 
+// 모달창에 클릭한 지역 강사 목록 띄우기
+$(function() {
+    $("img.pin").click(function() {
+        var clicked_pin_city = $(this).attr("id");
+        fetch('http://localhost:8080/instructors/' + clicked_pin_city).then( function(text) { 
+            text.json().then(function(data) {
+                var text = "";
+                console.log(data);
+                console.log("length of data : " +data.result.length);
+                for(var i=0 ; i<data.result.length ; i++) {
+                    var instrIdx = data.result[i].instrIdx;
+                    var name = data.result[i].name;
+                    var profileImgPath = data.result[i].profileImgPath;
+
+                    text += '<div class="member_wrap"> \n';
+                    text += '<a href="#' + instrIdx + '" id="modal_' + instrIdx + ' " class="profile_wrap"> \n';
+                    text += '<img src=" ' + profileImgPath +' "  class="profile_image" alt=" ' + name + '프로필 이미지"> \n' ;
+                    text += '<div class="name"> \n' ;
+                    text += name + "\n";
+                    text += '</div> \n' ;
+                    text += '</a> \n' ;
+                    text += '</div> \n';
+                    console.log(text + "in for loop");
+                }
+                console.log("final returned result : " + text);
+                document.querySelector(".loc_instr_list").innerHTML = text;
+            })
+        })
+    })
+});
 
 
 // // 이메일 형식 검증 함수

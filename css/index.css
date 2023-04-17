@@ -36,7 +36,6 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 0 80px 40px 80px;
-
 }
 
 .map_wrap {
@@ -52,6 +51,16 @@ img.pin {
     height: 33px;
     /* background: url(pngwing.png); */
     filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+}
+
+.modal img.pin {
+    width: 14.5px;
+    height: 24px;
+
+}
+
+span.city {
+    margin-left: 7px;
 }
 
 #Seoul {
@@ -94,17 +103,17 @@ img.pin {
 }
 
 .modal .loc_instr_list {
-    display: flex;
+    display: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
 
-.modal .member {
+.modal .member_wrap {
     margin-top:35px;
 }
 
-.modal .member .profile_wrap{
+.modal .member_wrap .profile_wrap{
     display: flex;
     width:37%;
     justify-content:space-between;
