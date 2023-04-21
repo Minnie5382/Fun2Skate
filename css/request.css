@@ -85,10 +85,10 @@ input.profile_upload {
     padding:10px 13px;
 }
 
-.message p.letter_count {
+.message #letter_count {
     position: absolute;
-    bottom: 10px;
-    right: 13px;
+    top: 15px;
+    right: 38px;
     font-size: 16px;
     vertical-align:top;
 }
@@ -96,7 +96,7 @@ input.profile_upload {
 .message #max_letters{
     position: absolute;
     top: 15px;
-    right: 3px;
+    right: 6px;
 }
 
 
