@@ -37,3 +37,7 @@ https://www.figma.com/proto/m5fgf23aY5pig6LwHf2XSg/Fun2Skate_prototype_final?nod
 ### 2023.04.19
 - 1. 강사 목록 출력 API 연동 완료
 - 2. 모달창 스크롤 기능 추가
+
+### 2023.04.21
+- 1. 텍스트박스 글자수 카운드 기능 추가
+
