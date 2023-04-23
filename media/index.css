@@ -1,0 +1,253 @@
+@media(max-width: 700px) {
+        
+    /* Skate Lessons 페이지 */
+    .page_wrap {
+        width:95%;
+        height:auto;
+        margin:11px;
+        background: #FFFFFF;
+        box-shadow: inset 0px 0px 20px 6px rgba(0, 0, 0, 0.27);
+        border-radius: 40px;
+    }
+
+
+
+    /* 페이지 제목 */
+    .page .title_wrap {
+        width:auto;
+        height: auto;
+        text-align: center;
+    }
+
+    .page .page_title {
+        font-family: 'Oleo Script';
+        font-size:36px;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        padding-top: 31px;
+    }
+
+
+    /* 지도 */
+    .content_wrap > .location {
+        width:auto;
+        height:auto;
+        display: none;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0 80px 40px 80px;
+    }
+
+    .map_wrap {
+        position: relative;
+    }
+    img.map {
+        width:385px;
+        height:501px;
+    }
+
+    img.pin {
+        width: 20px;
+        height: 33px;
+        /* background: url(pngwing.png); */
+        filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    .modal img.pin {
+        width: 14.5px;
+        height: 24px;
+
+    }
+
+    span.city {
+        margin-left: 7px;
+    }
+
+    #Seoul {
+        position: absolute;
+        left:115px;
+        top:71px;
+    }
+
+    #Gangneung {
+        position: absolute;
+        left:235px;
+        top:29px;
+    }
+
+    /* 모달창 */
+    .modal {
+        font-weight: bold;
+        width:301px;
+        height:392px;
+        background: #FFFFFF;
+        background-blend-mode: darken;
+        box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        font-family: 'Overlock';
+        
+
+    }
+
+
+    .modal .modal_title_wrap {
+        width:37%;
+        font-size: 27px;
+        margin-top:27px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+
+    }
+
+    .modal .loc_instr_list {
+        width:210px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        overflow-y: scroll;
+        scrollbar-color: #6969dd #e0e0e0;
+        scrollbar-width: thin;
+    }
+
+    .loc_instr_list:hover {
+        overflow: overlay; 
+    }
+
+    .modal .member_wrap {
+        margin-bottom: 30px;
+    }
+
+    .modal .member_wrap .profile_wrap{
+        display: flex;
+        width:37%;
+        justify-content:space-between;
+        align-items: center;
+        font-size: 25px;
+
+    }
+
+    .modal img.profile_image {
+        width:50px;
+        height:50px;
+        margin-right: 20px;
+    }
+
+    /* 강사 목록 */
+    .instructors_list {
+        height:auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .instructors_list .profile_card {
+        position: relative;
+        width: 83%;
+        height:334px;
+        background: #FFFFFF;
+        background-blend-mode: darken;
+        box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+        font-family: 'Play';
+        margin: 40px 0;
+    }
+
+    .instructors_list img.profile {
+        position: absolute;
+        width: 85px;
+        height: 85px;
+        top:26px;
+        left:7%;
+    }
+
+    .profile_card .name {
+        font-family: 'Play';
+        font-size: 33px;
+        position: absolute;
+        left: 39%;
+        top:34px;
+        font-weight: bold;
+    }
+
+    .profile_card .location {
+        position: absolute;
+        height: auto;
+        left: 39%;
+        top: 94px;
+        font-size: 18px;
+        line-height: 10px;
+        /* or 56% */
+        letter-spacing: -0.01em;
+    }
+
+    .profile_card .experience {
+        font-size: 15px;
+        position: absolute;
+        left: 39%;
+        top: 65px;
+        font-size: 17px;
+        line-height: 23px;
+        /* or 135% */
+        letter-spacing: -0.01em;
+    }
+
+    .profile_card .introducing {
+        font-size: 17px;
+        position: absolute;
+        line-height: 20px;
+        left: 0;
+        top: 128px;
+        padding: 0 20px;
+        letter-spacing: -0.01em;
+        text-align:justify;
+    }
+
+    .profile_card button.contact {
+        bottom: 13px;
+        font-size: 25px;
+    }
+
+    /* 버튼 공통 스타일 */
+    button {
+        font-family: 'Stylish';
+        cursor: pointer;
+        color:black;
+        font-size:27px;
+        background-color:rgba(217, 217, 217, 0.6);
+        border-radius: 0.5px;
+        border:none;
+        padding: 12px 10px;
+    }
+
+
+    /* 저작권 */
+    #copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+        left: 0;
+        bottom: 0;
+    }
+
+    #copyright p {
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    /* a 태그 스타일 설정 */
+    a {
+        color:#202020;
+        text-decoration:none;
+    }
+}

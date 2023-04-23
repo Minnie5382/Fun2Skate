@@ -151,7 +151,7 @@ span.city {
 
 .instructors_list .profile_card {
     position: relative;
-    width: 749px;
+    width: 78%;
     height:267px;
     background: #FFFFFF;
     background-blend-mode: darken;
@@ -164,14 +164,14 @@ span.city {
     position: absolute;
     width: 94px;
     height:94px;
-    left: 77px;
+    left: 10%;
     top: 42px;
 }
 
 .profile_card .name {
     font-size: 18px;
     position: absolute;
-    left: 216px;
+    left: 29%;
     top:34px;
     font-weight: bold;
 }
@@ -180,14 +180,14 @@ span.city {
     font-size: 14px;
     position: absolute;
     height: auto;
-    left: 332px;
+    left: 65%;
     top: 36px;
 }
 
 .profile_card .experience {
     font-size: 15px;
     position: absolute;
-    left: 216px;
+    left: 29%;
     top: 59px;
 }
 
@@ -195,9 +195,9 @@ span.city {
     font-size: 16px;
     position: absolute;
     line-height: 31px;
-    left: 217px;
+    left: 29%;
     top: 93px;
-    padding-right: 80px;
+    padding-right: 30px;
     letter-spacing: -0.01em;
 }
 
