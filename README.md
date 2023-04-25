@@ -40,5 +40,6 @@ https://www.figma.com/proto/m5fgf23aY5pig6LwHf2XSg/Fun2Skate_prototype_final?nod
 
 ### 2023.04.21
 - 1. Home 모바일 UI 추가
-- 1. 텍스트박스 글자수 카운드 기능 추가
+- 2. 텍스트박스 글자수 카운트 기능 추가
+- 3. 360px 이하에서는 깨짐 / 수정 예정
 
