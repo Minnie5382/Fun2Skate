@@ -43,3 +43,7 @@ https://www.figma.com/proto/m5fgf23aY5pig6LwHf2XSg/Fun2Skate_prototype_final?nod
 - 2. 텍스트박스 글자수 카운트 기능 추가
 - 3. 360px 이하에서는 깨짐 / 수정 예정
 
+## 2023.04.27
+- 1. 모든 페이지 반응형 변환 완료
+- 2. 클라이언트단 개발 완료!
+
