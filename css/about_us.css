@@ -27,10 +27,7 @@
 }
 
 /* 페이지 제목 */
-.page .title_wrap {
-    width:auto;
-    height:235px;
-}
+
 
 .page .page_title {
     font-family: 'Oleo Script';

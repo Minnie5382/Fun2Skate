@@ -1,5 +1,10 @@
-@media(max-width: 700px) {
-    /* apply 페이지 */
+@media (max-width: 830px) {
+    /* Request Lessons 페이지 */
+    .page {
+        display: flex;
+        justify-content: center;
+    }
+
     .page_wrap {
         font-family: 'Oleo Script';
         font-size: 16px;
@@ -30,106 +35,92 @@
         left: 71px;
     }
 
-    /* 신청서 폼 */
+    .page .page_title {
+        font-family: 'Oleo Script';
+        font-size:34px;
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+
+    /* 요청서 폼 */
     .page_wrap .description {
-        margin-bottom: 83px;
+        margin-bottom: px;
         line-height: 40px;
-        margin-left:-60px;
+        margin-left: 0;
+        text-align: left;
+        
     }
 
 
-    .page_wrap .apply_form {
+    .content_wrap .request_form {
         display: flex;
         flex-direction: column;
+        text-align: left;
     }
 
-    .apply_form > * {
+    .request_form > * {
         margin-bottom:55px;
+        font-size: 19px;
     }
 
-    .apply_form input, textarea {
+    .request_form input, textarea {
         margin-top:21.5px ;
     }
 
-    .apply_form span.ko, p.ko {
-        color: #737373;
-    }
-
-    .apply_form span.ko {
-        margin-left: 55px;
-        font-size: 23px;
-    }
-
-    /* 프로필 이미지 업로드 박스 */
-    input.profile_upload {
-        width:100%;
-    }
-
-    /* 이메일 형식 검증 */
-
-    #error_mail {
-        font-size:22px;
-        color:#EA3434;
-        margin-top:10px;
-        display:inline;
-    }
-
-    .apply_form .explanation {
+    .request_form .explanation {
         margin-top:2px;
-        font-size: 17px;
+        font-size: 15px;
         line-height: 30px;
     }
 
-    .page_wrap span.ko, p.ko {
+    .request_form span.ko, p.ko {
         color: #737373;
     }
 
-    .page_wrap span.ko {
+    .request_form span.ko {
         margin-left: 55px;
-        font-size: 17px;
     }
+
 
     /* 프로필 이미지 업로드 박스 */
     input.profile_upload {
         width:100%;
     }
 
-    /* Introducing 텍스트 박스 */
-    .introducing {
+    /* Message 텍스트 박스 */
+    .message {
         position: relative;
     }
-
-    .introducing textarea {
-        width:100%;
-        height:170px;
-        resize: none;
-        position: relative;
-        padding:10px 13px;
+    .message textarea {
+        border: none;
+        background: #EFEFEF;
+        border-radius: 5px;
+        height: 194px;
+        width: 93%;
     }
 
-    .introducing p.letter_count {
+    .message #letter_count {
         position: absolute;
-        bottom: 10px;
-        right: 13px;
-        font-size: 16px;
+        top: 15px;
+        right: 44px;
         vertical-align:top;
     }
 
-    .introducing #max_letters{
+    .message #max_letters{
         position: absolute;
         top: 15px;
-        right: 3px;
+        right: 6px;
     }
 
 
-
     /* 신청서 안내문 */
-    .page_wrap .notice {
+    .request_wrap .notice {
         font-family: 'Source Sans 3';
         text-align: center;
         line-height: 40px;
         font-size: 16px;
-        margin-top: 100px;
+        margin-top: 176px;
         color: black;
     }
 
@@ -142,16 +133,17 @@
         position: relative;
         width: 240px;
         font-size: 30px;
-        margin: 41px 0 70px 0;
+        margin: 70px 0 50px 0;
     }
 
     /* 텍스트박스 공통 스타일 */
-    input, textarea {
-        background: #F3F3F3;
-        border: 1px solid #939393;
-        width: 360px;
-        height: 40px;
-        font-size: 17px;
-        padding-left: 10px;
-    } 
+    input {
+        border:0;
+        border-bottom:1.5px solid black;
+        background: none;
+        width: 95%;
+        height: 35px;
+        font-size:18px;
+        padding-left: 7px;
+    }
 }

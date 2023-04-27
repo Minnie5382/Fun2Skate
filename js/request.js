@@ -1,4 +1,4 @@
-var MAX_LTR = 300;
+var MAX_LTR = 500;
 $(document).ready(function() {
   $('#message_box').on('keyup', function() {
       $('#letter_count').html($(this).val().length);
