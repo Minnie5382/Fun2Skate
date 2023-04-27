@@ -1,4 +1,4 @@
-@media (max-width: 360px) {
+@media (max-width: 500px) {
     /* Request Lessons 페이지 */
     .page {
         display: flex;
@@ -7,7 +7,7 @@
 
     .page_wrap {
         font-family: 'Oleo Script';
-        font-size: 13px;
+        font-size: 14px;
         display: flex;
         width:93%;
         height:1400px;
@@ -19,7 +19,7 @@
     .page .content_wrap {
         position: absolute;
         width: auto;
-        top: 110px;
+        top: 95px;
         margin: 0 33px;
         justify-content: center;
     }
@@ -35,7 +35,7 @@
 
     .page .page_title {
         font-family: 'Oleo Script';
-        font-size:34px;
+        font-size:26px;
         position: relative;
         left: 0px;
         top: 0px;

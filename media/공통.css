@@ -76,8 +76,8 @@
 
     /* 페이지 */
     .page {
-        height:auto;
-        width: auto;
+        display: flex;
+        justify-content: center;
     }
 
     /* 버튼 공통 스타일 */

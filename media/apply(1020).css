@@ -1,5 +1,5 @@
-@media (max-width: 830px) {
-    /* Request Lessons 페이지 */
+@media (max-width:1020px) {
+    /* Apply Lessons 페이지 */
     .page {
         display: flex;
         justify-content: center;
@@ -10,10 +10,9 @@
         font-size: 17.5px;
         display: flex;
         width:93%;
-        height:1400px;
-        flex-direction: column;
+        height:2000px;
         margin:0px;
-        text-align: center;
+        text-align: left;
     }
 
     .page .content_wrap {
@@ -51,46 +50,40 @@
     }
 
 
-    .content_wrap .request_form {
+    .content_wrap .apply_form {
         display: flex;
         flex-direction: column;
         text-align: left;
     }
 
-    .request_form > * {
+    .apply_form > * {
         margin-bottom:55px;
         font-size: 19px;
     }
 
-    .request_form input, textarea {
+    .apply_form input, textarea {
         margin-top:21.5px ;
     }
 
-    .request_form .explanation {
+    .apply_form .explanation {
         margin-top:2px;
         font-size: 15px;
         line-height: 30px;
     }
 
-    .request_form span.ko, p.ko {
+    .apply_form span.ko, p.ko {
         color: #737373;
     }
 
-    .request_form span.ko {
+    .apply_form span.ko {
         margin-left: 55px;
     }
 
-
-    /* 프로필 이미지 업로드 박스 */
-    input.profile_upload {
-        width:100%;
-    }
-
-    /* Message 텍스트 박스 */
-    .message {
+    /* introducing 텍스트 박스 */
+    .introducing {
         position: relative;
     }
-    .message textarea {
+    .introducing textarea {
         border: none;
         background: #EFEFEF;
         border-radius: 5px;
@@ -98,14 +91,14 @@
         width: 93%;
     }
 
-    .message #letter_count {
+    .introducing #letter_count {
         position: absolute;
         top: 15px;
         right: 44px;
         vertical-align:top;
     }
 
-    .message #max_letters{
+    .introducing #max_letters{
         position: absolute;
         top: 15px;
         right: 6px;
@@ -113,12 +106,12 @@
 
 
     /* 신청서 안내문 */
-    .request_wrap .notice {
+    .page_wrap .notice {
         font-family: 'Source Sans 3';
         text-align: center;
         line-height: 40px;
         font-size: 16px;
-        margin-top: 176px;
+        margin-top: 50px;
         color: black;
     }
 
@@ -139,7 +132,7 @@
         border:0;
         border-bottom:1.5px solid black;
         background: none;
-        width: 95%;
+        width: 97%;
         height: 35px;
         font-size:18px;
         padding-left: 7px;

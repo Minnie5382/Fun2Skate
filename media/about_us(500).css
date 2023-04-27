@@ -1,4 +1,4 @@
-@media(max-width: 830px) {
+@media(max-width: 500px) {
     /* about us 페이지 */
 
     .page {
@@ -9,7 +9,7 @@
     .page_wrap {
         font-size:16px;
         width:93%;
-        height:650px;
+        height:710px;
         position:relative;
         margin:0px;
         background: #FFFFFF;
@@ -26,7 +26,7 @@
 
     .page .page_title {
         font-family: 'Oleo Script';
-        font-size:34px;
+        font-size:26px;
         position: relative;
         left: 0;
         top: 28px;
@@ -45,12 +45,11 @@
         font-family: 'Nunito';
         font-style: normal;
         font-weight: 400;
-        font-size:14px;
+        font-size:12px;
         line-height:20px;
         text-align:left;
         letter-spacing: 0.02em;
         color: #000000;
-
     }
 
     .content span.Fun2skate {

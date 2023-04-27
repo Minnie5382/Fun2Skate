@@ -1,4 +1,4 @@
-@media(max-width: 830px) {
+@media(max-width: 1020px) {
         
     /* Skate Lessons 페이지 */
     .page_wrap {
@@ -9,7 +9,6 @@
         box-shadow: inset 0px 0px 20px 6px rgba(0, 0, 0, 0.27);
         border-radius: 40px;
     }
-
 
 
     /* 페이지 제목 */
