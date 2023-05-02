@@ -38,7 +38,7 @@
                         <div class="page_title">Apply</div>
                     </div>
                     <div class="content_wrap">
-                        <form class="gform" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbz3WCYOYPiarnjfdVPT9fr8DacnzFJbmJwaQz631W0PY7bGkA1qvyc0m9fk4g5E8BYyMw/exec">
+                        <form id="form" method="POST">
                             <div class="description">
                                 <p>Fill out the application form below. 
                                 </p>
@@ -52,7 +52,7 @@
                                         <span class="ko">이름</span>
                                     </p>
                                     <p>
-                                        <input type="text">
+                                        <input name="name" type="text">
                                     </p>
                                 </div>
                                 <div class="experience">
@@ -61,7 +61,7 @@
                                         <span class="ko">경력 (년수)</span>
                                     </p>
                                     <p>
-                                        <input type="text">
+                                        <input name="experience" type="text">
                                     </p>
                                 </div>
                                 <div class="profile_image">
@@ -70,7 +70,7 @@
                                         <span class="ko">프로필 이미지</span>
                                     </p>
                                     <p>
-                                        <input type="file" class="profile_upload" accept="image/*">
+                                        <input type="file" id="file_upload" class="profile_upload" accept="image/*">
                                     </p>
                                 </div>
                                 <div class="introducing">
@@ -79,7 +79,7 @@
                                         <span class="ko">간략한 소개</span>
                                     </p>
                                     <span>
-                                        <textarea maxlength="150" id="message_box" name="message"></textarea>
+                                        <textarea name="introducing" maxlength="150" id="message_box" name="message"></textarea>
                                     </span>
                                     <span id="letter_count"></span>
                                     <span id="max_letters">/150</span>
@@ -90,7 +90,7 @@
                                         <span class="ko">수업가능 지역</span>
                                     </p>
                                     <p>
-                                        <input type="text">
+                                        <input name="regions" type="text">
                                     </p>
                                 </div>
                                 <div class="kakaotalk_id">
@@ -99,7 +99,7 @@
                                         <span class="ko">카카오톡 ID</span>
                                     </p>
                                     <p>
-                                        <input type="text">
+                                        <input name="kakaoId" type="text">
                                     </p>
                                     <div class="explanation">
                                         <p class="en">When you receive a lesson request, you will be notified with your KakaoTalk ID.</p>
@@ -112,7 +112,7 @@
                                         <span class="ko">이메일 주소</span>
                                     </p>
                                     <p>
-                                        <input type="email" name="mail" id="mail" maxlength="30">
+                                        <input name="email" type="email" name="mail" id="mail" maxlength="30">
                                         <span id="error_mail" class="result-email result-check"></span>
                                     </p>
                                     <div class="explanation">

@@ -12,8 +12,6 @@ $(document).ready(function() {
 
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
     var myForm = document.getElementById('form');
     var payload = new FormData(myForm);
 
@@ -26,11 +24,23 @@ form.addEventListener('submit', (e) => {
         body: payload
       })
       .then(res => res.json())
-      .then(data => console.log(data));
-    
-    alert("Your submission is complete! \nWe'll contact you within 24 hours.\n제출이 완료되었습니다. 24시간 이내로 연락드리겠습니다.");
-    console.log(localStorage.getItem("instrIdx"));
-    // location.href='./index.html';
+      .then(function(data) { 
+        // console.log("data : " + data);
+        // console.log("data.isSuccess : " + data.isSuccess);
+        if(data.isSuccess) {
+          alert("Your submission is complete! \n" + 
+          "We'll contact you within 24 hours.\n" + 
+          "제출이 완료되었습니다. 24시간 이내로 연락드리겠습니다.");
+          location.href='./index.html';
+        } else {
+          alert("We have a problem. Try again from the beginning, or contact the administrator.\n" + 
+          "문제가 생겼습니다. 처음부터 다시 시도하거나, 관리자에게 문의하세요.");
+          e.preventDefault();
+        }
+        
+      }
+        );
+
     localStorage.clear();
   
 });
