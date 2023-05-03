@@ -16,8 +16,6 @@ $(document).ready(function() {
 
 // 제출 시 지원서 이메일 전송
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
   const fileInput = document.getElementById("file_upload");
   var myForm = document.getElementById('form');
   var payload = new FormData(myForm);
@@ -38,7 +36,7 @@ form.addEventListener('submit', (e) => {
         alert("Your submission is complete! \n" + 
         "We'll contact you within 24 hours.\n" + 
         "제출이 완료되었습니다. 24시간 이내로 연락드리겠습니다.");
-        // location.href='./index.html';
+        location.href='./index.html';
       } else {
         alert("We have a problem. Try again from the beginning, or contact the administrator.\n" + 
         "문제가 생겼습니다. 처음부터 다시 시도하거나, 관리자에게 문의하세요.");
