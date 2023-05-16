@@ -24,7 +24,7 @@ form.addEventListener('submit', (e) => {
 
   payload.append("ProfileImg", uploaded_file);
 
-  fetch('https://3.37.127.194:9000/instructors/apply', {
+  fetch('http://3.37.127.194:9000/instructors/apply', {
       method: 'POST',
       body: payload
     })

@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
 
     console.log([...payload]);
 
-    fetch('https://3.37.127.194:9000/email', {
+    fetch('http://3.37.127.194:9000/email', {
         method: 'POST',
         body: payload
       })
