@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
 
     console.log([...payload]);
 
-    fetch('http://3.37.127.194:9000/email', {
+    fetch('https://vici-minn.shop:9000/email', {
         method: 'POST',
         body: payload
       })
