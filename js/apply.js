@@ -24,7 +24,7 @@ form.addEventListener('submit', (e) => {
 
   payload.append("ProfileImg", uploaded_file);
 
-  fetch('https://vici-minn.shop:9000/instructors/apply', {
+  fetch('https://vici-minn.shop:8080/instructors/apply', {
       method: 'POST',
       body: payload
     })
