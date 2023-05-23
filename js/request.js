@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
 
     console.log([...payload]);
 
-    fetch('https://vici-minn.shop:8080/email', {
+    fetch('https://43.201.200.104:8080/email', {
         method: 'POST',
         body: payload
       })
