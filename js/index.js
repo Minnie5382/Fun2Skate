@@ -22,7 +22,10 @@ $(function() {
         modal.style.display = "flex";
         fetch(domain + '/instructors/' + clicked_pin_city, {
             method: 'GET',
-            headers: {'Access-Control-Allow-Origin': '*'}
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods':'GET',
+                'Access-Control-Allow-Headers': 'X-PINGOTHER, Content-Type'},
           }).then( function(text) { 
             text.json().then(function(data) {
                 var text = "";
@@ -50,7 +53,10 @@ $(function() {
 $(function() {
     fetch(domain + '/instructors', {
         method: 'GET',
-        headers: {'Access-Control-Allow-Origin': '*'}
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods':'GET',
+            'Access-Control-Allow-Headers': 'X-PINGOTHER, Content-Type'},
       }).then( function(text) { 
         text.json().then(function(data) {
             var text = "";
