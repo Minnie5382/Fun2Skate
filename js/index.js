@@ -22,10 +22,7 @@ $(function() {
         modal.style.display = "flex";
         fetch(domain + '/instructors/' + clicked_pin_city, {
             method: 'GET',
-            mode: 'cors',
-            credentials: 'same-origin',
             headers: {
-                'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
               }
           }).then( function(text) { 
@@ -55,10 +52,7 @@ $(function() {
 $(function() {
     fetch(domain + '/instructors', {
         method: 'GET',
-        mode: 'cors',
-        credentials: 'same-origin',
         headers: {
-            'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
           }
       }).then( function(text) { 
