@@ -1,4 +1,5 @@
 var MAX_LTR = 500;
+var domain = "https://43.201.200.104"
 $(document).ready(function() {
   $('#message_box').on('keyup', function() {
       $('#letter_count').html($(this).val().length);
@@ -19,7 +20,7 @@ form.addEventListener('submit', (e) => {
 
     console.log([...payload]);
 
-    fetch('https://43.201.200.104/email', {
+    fetch(domain + '/email', {
         method: 'POST',
         body: payload
       })

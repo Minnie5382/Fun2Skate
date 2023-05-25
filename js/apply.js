@@ -1,5 +1,6 @@
 var submitButton = document.querySelector("button.submit");
 var MAX_LTR = 150;
+var domain = "https://43.201.200.104"
 
 // 메시지 박스 글자수 제한 기능
 $(document).ready(function() {
@@ -24,7 +25,7 @@ form.addEventListener('submit', (e) => {
 
   payload.append("ProfileImg", uploaded_file);
 
-  fetch('https://43.201.200.104/instructors/apply', {
+  fetch(domain + '/instructors/apply', {
       method: 'POST',
       body: payload
     })

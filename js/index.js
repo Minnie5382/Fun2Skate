@@ -2,6 +2,7 @@
 var contactButton = document.querySelectorAll("button.contact");
 var modal = document.querySelector("#modal");
 var pin = $(".map_wrap img.pin");
+var domain = "https://43.201.200.104"
 
 // contact 버튼 클릭 시 instrIdx 넘겨주고 request 페이지로 이동
 $(document).on("click", "button.contact", function() {
@@ -19,7 +20,7 @@ $(function() {
         document.querySelector("span.city").innerHTML = clicked_pin_city;
         // console.log(clicked_pin_city);
         modal.style.display = "flex";
-        fetch('https://43.201.200.104/instructors/' + clicked_pin_city).then( function(text) { 
+        fetch(domain + '/instructors/' + clicked_pin_city).then( function(text) { 
             text.json().then(function(data) {
                 var text = "";
                 for(var i=0 ; i<data.result.length ; i++) {
@@ -44,7 +45,7 @@ $(function() {
 
 // 전체 강사 목록 띄우기
 $(function() {
-    fetch('https://43.201.200.104/instructors').then( function(text) { 
+    fetch(domain + '/instructors').then( function(text) { 
         text.json().then(function(data) {
             var text = "";
             for(var i=0 ; i<data.result.length ; i++) {
