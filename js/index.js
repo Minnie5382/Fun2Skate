@@ -24,6 +24,10 @@ $(function() {
             method: 'GET',
             mode: 'cors',
             credentials: 'same-origin',
+            header: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+              }
           }).then( function(text) { 
             text.json().then(function(data) {
                 var text = "";
@@ -53,6 +57,10 @@ $(function() {
         method: 'GET',
         mode: 'cors',
         credentials: 'same-origin',
+        header: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+          }
       }).then( function(text) { 
         text.json().then(function(data) {
             var text = "";
