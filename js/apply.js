@@ -1,6 +1,6 @@
 var submitButton = document.querySelector("button.submit");
 var MAX_LTR = 150;
-var domain = "https://43.201.200.104"
+var domain = "https://43.201.200.104:8080"
 
 // 메시지 박스 글자수 제한 기능
 $(document).ready(function() {

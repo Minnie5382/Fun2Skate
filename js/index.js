@@ -2,7 +2,7 @@
 var contactButton = document.querySelectorAll("button.contact");
 var modal = document.querySelector("#modal");
 var pin = $(".map_wrap img.pin");
-var domain = "https://43.201.200.104"
+var domain = "https://43.201.200.104:8080"
 
 // contact 버튼 클릭 시 instrIdx 넘겨주고 request 페이지로 이동
 $(document).on("click", "button.contact", function() {
