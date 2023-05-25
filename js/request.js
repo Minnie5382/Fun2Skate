@@ -22,9 +22,6 @@ form.addEventListener('submit', (e) => {
 
     fetch(domain + '/email', {
       method: 'POST',
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      },
       body: payload
     })
       .then(res => res.json())

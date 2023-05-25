@@ -20,42 +20,36 @@ $(function() {
         document.querySelector("span.city").innerHTML = clicked_pin_city;
         // console.log(clicked_pin_city);
         modal.style.display = "flex";
-        fetch(domain + '/instructors/' + clicked_pin_city, {
-            method: 'GET',
-            headers: {
-                'Access-Control-Allow-Origin': '*'
-              }
-          }).then( function(text) { 
-            text.json().then(function(data) {
-                var text = "";
-                for(var i=0 ; i<data.result.length ; i++) {
-                    var instrIdx = data.result[i].instrIdx;
-                    var name = data.result[i].name;
-                    var profileImgPath = data.result[i].profileImgPath;
+        fetch(domain + '/instructors/' + clicked_pin_city)
+          .then(function(response) { 
+            return response.json();
+          })
+          .then(function(data) {
+            var text = "";
+            for(var i = 0; i < data.result.length; i++) {
+              var instrIdx = data.result[i].instrIdx;
+              var name = data.result[i].name;
+              var profileImgPath = data.result[i].profileImgPath;
 
-                    text += '<div class="member_wrap"> \n';
-                    text += '<a href="#' + instrIdx + '" id="modal_' + instrIdx + ' " class="profile_wrap"> \n';
-                    text += '<img src=" ' + profileImgPath +' "  class="profile_image" alt=" ' + name + '프로필 이미지"> \n' ;
-                    text += '<div class="name"> \n' ;
-                    text += name + "\n";
-                    text += '</div> \n' ;
-                    text += '</a> \n' ;
-                    text += '</div> \n';
-                }
-                $(".loc_instr_list").html(text);
-            })
-        })
-    })
+              text += '<div class="memberwrap"> \n';
+              text += '<a href="#' + instrIdx + '" id="modal' + instrIdx + ' " class="profile_wrap"> \n';
+              text += '<img src="' + profileImgPath + '"  class="profile_image" alt="' + name + '프로필 이미지"> \n' ;
+              text += '<div class="name"> \n' ;
+              text += name + "\n";
+              text += '</div> \n' ;
+              text += '</a> \n' ;
+              text += '</div> \n';
+            }
+            $(".loc_instr_list").html(text);
+          });
+    });
 });
+
 
 // 전체 강사 목록 띄우기
 $(function() {
-    fetch(domain + '/instructors', {
-        method: 'GET',
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-          }
-      }).then( function(text) { 
+    fetch(domain + '/instructors')
+      .then( function(text) { 
         text.json().then(function(data) {
             var text = "";
             for(var i=0 ; i<data.result.length ; i++) {
