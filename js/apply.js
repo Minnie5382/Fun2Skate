@@ -29,8 +29,7 @@ form.addEventListener('submit', (e) => {
       method: 'POST',
       headers: {
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods':'POST',
-        'Access-Control-Allow-Headers': 'X-PINGOTHER, Content-Type'},
+        'Access-Control-Allow-Methods':'POST'},
       body: payload
     })
     .then(res => res.json())

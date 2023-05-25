@@ -23,9 +23,8 @@ $(function() {
         fetch(domain + '/instructors/' + clicked_pin_city, {
             method: 'GET',
             headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods':'GET',
-                'Access-Control-Allow-Headers': 'X-PINGOTHER, Content-Type'},
+                'Access-Control-Allow-Origin': 'fun2skate.site',
+                'Access-Control-Allow-Methods':'POST'},
           }).then( function(text) { 
             text.json().then(function(data) {
                 var text = "";
@@ -55,8 +54,7 @@ $(function() {
         method: 'GET',
         headers: {
             'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods':'GET',
-            'Access-Control-Allow-Headers': 'X-PINGOTHER, Content-Type'},
+            'Access-Control-Allow-Methods':'GET'},
       }).then( function(text) { 
         text.json().then(function(data) {
             var text = "";
