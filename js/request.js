@@ -1,5 +1,5 @@
 var MAX_LTR = 500;
-var domain = "https://43.201.200.104:8080"
+var domain = "https://fun2skate.site:8080"
 $(document).ready(function() {
   $('#message_box').on('keyup', function() {
       $('#letter_count').html($(this).val().length);
