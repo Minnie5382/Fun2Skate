@@ -21,9 +21,10 @@ form.addEventListener('submit', (e) => {
     console.log([...payload]);
 
     fetch(domain + '/email', {
-        method: 'POST',
-        body: payload
-      })
+      method: 'POST',
+      headers: {'Access-Control-Allow-Origin': '*'},
+      body: payload
+    })
       .then(res => res.json())
       .then(function(data) { 
         // console.log("data : " + data);

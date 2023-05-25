@@ -20,7 +20,11 @@ $(function() {
         document.querySelector("span.city").innerHTML = clicked_pin_city;
         // console.log(clicked_pin_city);
         modal.style.display = "flex";
-        fetch(domain + '/instructors/' + clicked_pin_city).then( function(text) { 
+        fetch(domain + '/instructors/' + clicked_pin_city, {
+            method: 'GET',
+            headers: {'Access-Control-Allow-Origin': '*'},
+            body: payload
+          }).then( function(text) { 
             text.json().then(function(data) {
                 var text = "";
                 for(var i=0 ; i<data.result.length ; i++) {
@@ -45,7 +49,11 @@ $(function() {
 
 // 전체 강사 목록 띄우기
 $(function() {
-    fetch(domain + '/instructors').then( function(text) { 
+    fetch(domain + '/instructors', {
+        method: 'GET',
+        headers: {'Access-Control-Allow-Origin': '*'},
+        body: payload
+      }).then( function(text) { 
         text.json().then(function(data) {
             var text = "";
             for(var i=0 ; i<data.result.length ; i++) {
