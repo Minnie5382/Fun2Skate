@@ -22,8 +22,7 @@ $(function() {
         modal.style.display = "flex";
         fetch(domain + '/instructors/' + clicked_pin_city, {
             method: 'GET',
-            headers: {'Access-Control-Allow-Origin': '*'},
-            body: payload
+            headers: {'Access-Control-Allow-Origin': '*'}
           }).then( function(text) { 
             text.json().then(function(data) {
                 var text = "";
@@ -51,8 +50,7 @@ $(function() {
 $(function() {
     fetch(domain + '/instructors', {
         method: 'GET',
-        headers: {'Access-Control-Allow-Origin': '*'},
-        body: payload
+        headers: {'Access-Control-Allow-Origin': '*'}
       }).then( function(text) { 
         text.json().then(function(data) {
             var text = "";
