@@ -1,5 +1,22 @@
 var MAX_LTR = 500;
 var domain = "https://fun2skate.site:8080"
+
+const backendServerUrl = domain;
+
+function handleRequest(url, options) {
+  return fetch(url, options)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error(error);
+      throw new Error('Internal Server Error');
+    });
+}
+
 $(document).ready(function() {
   $('#message_box').on('keyup', function() {
       $('#letter_count').html($(this).val().length);
@@ -20,10 +37,14 @@ form.addEventListener('submit', (e) => {
 
     console.log([...payload]);
 
-    fetch(domain + '/email', {
+    const requestOptions = {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: payload
-    })
+    };
+    handleRequest(`${backendServerUrl}/email}`, requestOptions)
       .then(res => res.json())
       .then(function(data) { 
         // console.log("data : " + data);

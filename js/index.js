@@ -13,42 +13,72 @@ $(document).on("click", "button.contact", function() {
     location.href='./request.html#page';
 });
 
+
+const backendServerUrl = domain;
+
+function handleRequest(url, options) {
+  return fetch(url, options)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error(error);
+      throw new Error('Internal Server Error');
+    });
+}
 // 모달창에 클릭한 지역 강사 목록 띄우기
 $(function() {
-    $(".map_wrap img.pin").click(function() {
-        var clicked_pin_city = $(this).attr("id");
-        document.querySelector("span.city").innerHTML = clicked_pin_city;
-        // console.log(clicked_pin_city);
-        modal.style.display = "flex";
-        fetch(domain + '/instructors/' + clicked_pin_city)
-          .then(function(response) { 
-            return response.json();
-          })
-          .then(function(data) {
-            var text = "";
-            for(var i = 0; i < data.result.length; i++) {
-              var instrIdx = data.result[i].instrIdx;
-              var name = data.result[i].name;
-              var profileImgPath = data.result[i].profileImgPath;
+  $(".map_wrap img.pin").click(function() {
+    var clicked_pin_city = $(this).attr("id");
+    document.querySelector("span.city").innerHTML = clicked_pin_city;
+    // console.log(clicked_pin_city);
+    modal.style.display = "flex";
+    const requestOptions = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    };
+    handleRequest(`${backendServerUrl}/instructors/${clicked_pin_city}`, requestOptions)
+      .then(data => {
+        var text = "";
+        for(var i = 0; i < data.result.length; i++) {
+          var instrIdx = data.result[i].instrIdx;
+          var name = data.result[i].name;
+          var profileImgPath = data.result[i].profileImgPath;
 
-              text += '<div class="memberwrap"> \n';
-              text += '<a href="#' + instrIdx + '" id="modal' + instrIdx + ' " class="profile_wrap"> \n';
-              text += '<img src="' + profileImgPath + '"  class="profile_image" alt="' + name + '프로필 이미지"> \n' ;
-              text += '<div class="name"> \n' ;
-              text += name + "\n";
-              text += '</div> \n' ;
-              text += '</a> \n' ;
-              text += '</div> \n';
-            }
-            $(".loc_instr_list").html(text);
-          });
-    });
+          text += '<div class="memberwrap"> \n';
+          text += '<a href="#' + instrIdx + '" id="modal' + instrIdx + ' " class="profile_wrap"> \n';
+          text += '<img src="' + profileImgPath + '"  class="profile_image" alt="' + name + '프로필 이미지"> \n' ;
+          text += '<div class="name"> \n' ;
+          text += name + "\n";
+          text += '</div> \n' ;
+          text += '</a> \n' ;
+          text += '</div> \n';
+        }
+        $(".loc_instr_list").html(text);
+      })
+      .catch(error => {
+        console.error(error);
+        // Handle error
+      });
+  });
 });
+
 
 
 // 전체 강사 목록 띄우기
 $(function() {
-    fetch(domain + '/instructors')
+    const requestOptions = {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      };
+      handleRequest(`${backendServerUrl}/instructors`, requestOptions)
       .then( function(text) { 
         text.json().then(function(data) {
             var text = "";

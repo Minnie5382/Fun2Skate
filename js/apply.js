@@ -2,6 +2,23 @@ var submitButton = document.querySelector("button.submit");
 var MAX_LTR = 150;
 var domain = "https://fun2skate.site:8080"
 
+const backendServerUrl = domain;
+
+function handleRequest(url, options) {
+  return fetch(url, options)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error(error);
+      throw new Error('Internal Server Error');
+    });
+}
+
+
 // 메시지 박스 글자수 제한 기능
 $(document).ready(function() {
   $('#message_box').on('keyup', function() {
@@ -25,14 +42,17 @@ form.addEventListener('submit', (e) => {
 
   payload.append("ProfileImg", uploaded_file);
 
-  fetch(domain + '/instructors/apply', {
-      method: 'POST',
-      body: payload
-    })
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: payload
+  };
+  handleRequest(`${backendServerUrl}/instructors/apply}`, requestOptions)
     .then(res => res.json())
     .then(function(data) {
       console.log(data);
-
       if(data.isSuccess) {
         alert("Your submission is complete! \n" + 
         "We'll contact you within 24 hours.\n" + 
