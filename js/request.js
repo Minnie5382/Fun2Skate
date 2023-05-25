@@ -24,7 +24,7 @@ form.addEventListener('submit', (e) => {
       method: 'POST',
       mode: 'cors',
       credentials: 'same-origin',
-      header: {
+      headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
       },

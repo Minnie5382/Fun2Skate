@@ -24,7 +24,7 @@ $(function() {
             method: 'GET',
             mode: 'cors',
             credentials: 'same-origin',
-            header: {
+            headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
               }
@@ -57,7 +57,7 @@ $(function() {
         method: 'GET',
         mode: 'cors',
         credentials: 'same-origin',
-        header: {
+        headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
           }
