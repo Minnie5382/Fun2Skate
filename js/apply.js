@@ -27,9 +27,8 @@ form.addEventListener('submit', (e) => {
 
   fetch(domain + '/instructors/apply', {
       method: 'POST',
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods':'POST'},
+      mode: 'cors',
+      credentials: 'same-origin',
       body: payload
     })
     .then(res => res.json())

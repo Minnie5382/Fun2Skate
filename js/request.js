@@ -22,9 +22,8 @@ form.addEventListener('submit', (e) => {
 
     fetch(domain + '/email', {
       method: 'POST',
-      headers: {
-        'Access-Control-Allow-Origin': 'fun2skate.site',
-        'Access-Control-Allow-Methods':'POST'},
+      mode: 'cors',
+      credentials: 'same-origin',
       body: payload
     })
       .then(res => res.json())

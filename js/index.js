@@ -22,9 +22,8 @@ $(function() {
         modal.style.display = "flex";
         fetch(domain + '/instructors/' + clicked_pin_city, {
             method: 'GET',
-            headers: {
-                'Access-Control-Allow-Origin': 'fun2skate.site',
-                'Access-Control-Allow-Methods':'POST'},
+            mode: 'cors',
+            credentials: 'same-origin',
           }).then( function(text) { 
             text.json().then(function(data) {
                 var text = "";
@@ -52,9 +51,8 @@ $(function() {
 $(function() {
     fetch(domain + '/instructors', {
         method: 'GET',
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods':'GET'},
+        mode: 'cors',
+        credentials: 'same-origin',
       }).then( function(text) { 
         text.json().then(function(data) {
             var text = "";
