@@ -45,7 +45,7 @@ form.addEventListener('submit', (e) => {
       // .then(res => res.json())
       .then(function(data) { 
         // console.log("data : " + data);
-        // console.log("data.isSuccess : " + data.isSuccess);
+        console.log("data.isSuccess : " + data.isSuccess);
         if(data.isSuccess) {
           alert("Your submission is complete! \n" + 
           "We'll contact you within 24 hours.\n" + 
