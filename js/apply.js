@@ -50,6 +50,7 @@ $("#file_upload").off().on("change", function(){
 // 제출 시 지원서 이메일 전송
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  alert("처리 중입니다. 이 작업은 최대 1분 정도 소요될 수 있습니다.");
   const fileInput = document.getElementById("file_upload");
   var myForm = document.getElementById('form');
   var payload = new FormData(myForm);
@@ -90,6 +91,12 @@ for (let value of payload.values()) {
   localStorage.clear();
 
 });
+
+form.addEventListener('submit', (e) => {
+  var loading = document.querySelector(".loading");
+  loading.style.display = "flex";
+}
+);
 
 // // 이메일 형식 검증 함수
 // function email_check( email ) {    
