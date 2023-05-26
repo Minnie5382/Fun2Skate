@@ -80,8 +80,7 @@ $(function() {
         }
       };
       handleRequest(`${backendServerUrl}/instructors`, requestOptions)
-      .then( function(text) { 
-        text.then(function(data) {
+        .then(data => {
             var text = "";
             for(var i=0 ; i<data.result.length ; i++) {
                 var instrIdx = data.result[i].instrIdx;
@@ -119,6 +118,5 @@ $(function() {
             }
             document.querySelector(".instructors_list").innerHTML = text;
         })
-    })
 });
 
