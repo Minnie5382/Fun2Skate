@@ -34,6 +34,7 @@ $(document).ready(function() {
 
 // 제출 시 지원서 이메일 전송
 form.addEventListener('submit', (e) => {
+  e.preventDefault();
   const fileInput = document.getElementById("file_upload");
   var myForm = document.getElementById('form');
   var payload = new FormData(myForm);
@@ -48,7 +49,7 @@ form.addEventListener('submit', (e) => {
     body: payload
   };
 
-  /* key 확인하기 */
+    /* key 확인하기 */
 for (let key of myForm.keys()) {
   console.log(key);
 }
@@ -57,8 +58,6 @@ for (let key of myForm.keys()) {
 for (let value of myForm.values()) {
    console.log(value);
 }
-
-  e.preventDefault();
 
   // handleRequest(`${backendServerUrl}/instructors/apply`, requestOptions)
   //   .then(function(data) {
