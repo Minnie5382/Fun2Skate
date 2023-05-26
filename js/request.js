@@ -46,7 +46,7 @@ form.addEventListener('submit', (e) => {
       .then(function(data) { 
         // console.log("data : " + data);
         console.log("data.isSuccess : " + data.isSuccess);
-        if(data.isSuccess) {
+        if(data.isSuccess == "true") {
           alert("Your submission is complete! \n" + 
           "We'll contact you within 24 hours.\n" + 
           "제출이 완료되었습니다. 24시간 이내로 연락드리겠습니다.");
