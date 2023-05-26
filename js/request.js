@@ -7,13 +7,13 @@ function handleRequest(url, options) {
   return fetch(url, options)
     .then(response => {
       if (!response.ok) {
-        // throw new Error('Request failed');
+        throw new Error('Request failed');
       }
-      // return response.json();
+      return response.json();
     })
     .catch(error => {
-      // console.error(error);
-      // throw new Error('Internal Server Error');
+      console.error(error);
+      throw new Error('Internal Server Error');
     });
 }
 
