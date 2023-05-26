@@ -81,7 +81,7 @@ $(function() {
       };
       handleRequest(`${backendServerUrl}/instructors`, requestOptions)
       .then( function(text) { 
-        text.json().then(function(data) {
+        text.then(function(data) {
             var text = "";
             for(var i=0 ; i<data.result.length ; i++) {
                 var instrIdx = data.result[i].instrIdx;
