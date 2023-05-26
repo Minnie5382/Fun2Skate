@@ -41,8 +41,7 @@ form.addEventListener('submit', (e) => {
       method: 'POST',
       body: payload
     };
-    handleRequest(backendServerUrl + '/email', requestOptions)
-      // .then(data => data.json())
+    handleRequest(`${backendServerUrl}/email`, requestOptions)
       .then(function(data) { 
         console.log("data : " + data);
         console.log("data.isSuccess : " + data.isSuccess);
@@ -57,8 +56,6 @@ form.addEventListener('submit', (e) => {
           "문제가 생겼습니다. 처음부터 다시 시도하거나, 관리자에게 문의하세요.");
           e.preventDefault();
         }
-        e.preventDefault();
-        
       }
         );
 
