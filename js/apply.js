@@ -46,6 +46,7 @@ form.addEventListener('submit', (e) => {
     method: 'POST',
     body: payload
   };
+  
   handleRequest(`${backendServerUrl}/instructors/apply`, requestOptions)
     .then(function(data) {
       console.log(data);
