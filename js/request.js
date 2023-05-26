@@ -42,7 +42,7 @@ form.addEventListener('submit', (e) => {
       body: payload
     };
     handleRequest(backendServerUrl + '/email', requestOptions)
-      .then(data => data.json())
+      // .then(data => data.json())
       .then(function(data) { 
         console.log("data : " + data);
         console.log("data.isSuccess : " + data.isSuccess);
