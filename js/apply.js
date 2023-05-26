@@ -41,12 +41,13 @@ form.addEventListener('submit', (e) => {
   const uploaded_file = fileInput.files[0];
 
   payload.append("ProfileImg", uploaded_file);
+  console.log(uploaded_file);
 
   const requestOptions = {
     method: 'POST',
     body: payload
   };
-  
+
   handleRequest(`${backendServerUrl}/instructors/apply`, requestOptions)
     .then(function(data) {
       console.log(data);
