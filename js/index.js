@@ -76,6 +76,7 @@ $(function() {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin':'*'
         }
       };
       handleRequest(`${backendServerUrl}/instructors`, requestOptions)
@@ -101,19 +102,20 @@ $(function() {
                     }
                 }
 
-                text += '<div id="' + instrIdx +'" class="profile_card">\n';
-                text += '<img class="profile" src="' + profileImgPath + '" alt="' + name +' 프로필 이미지">\n';
-                text += '<div class="name">' + name +'</div>\n';
-                text += '<div class="location">in ' + regions +'</div>\n';
-                text += '<div class="experience">experince : ' + experience + ' years</div>\n';
-                text += '<div class="introducing">\n';
-                text += '<p>' + introducing + '</p>\n';
-                text += '</div>\n';
-                text += '<div class="btn_wrap">\n';
-                text += '<button class="contact">CONTACT</button>\n';
-                text += '</div>\n';
-                text += '</div>';
-                
+                {
+                    text += '<div id="' + instrIdx +'" class="profile_card">\n';
+                    text += '<img class="profile" src="' + profileImgPath + '" alt="' + name +' 프로필 이미지">\n';
+                    text += '<div class="name">' + name +'</div>\n';
+                    text += '<div class="location">in ' + regions +'</div>\n';
+                    text += '<div class="experience">experince : ' + experience + ' years</div>\n';
+                    text += '<div class="introducing">\n';
+                    text += '<p>' + introducing + '</p>\n';
+                    text += '</div>\n';
+                    text += '<div class="btn_wrap">\n';
+                    text += '<button class="contact">CONTACT</button>\n';
+                    text += '</div>\n';
+                    text += '</div>';
+                }
             }
             document.querySelector(".instructors_list").innerHTML = text;
         })
