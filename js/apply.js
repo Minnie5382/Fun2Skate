@@ -50,12 +50,12 @@ form.addEventListener('submit', (e) => {
   };
 
     /* key 확인하기 */
-for (let key of myForm.keys()) {
+for (let key of payload.keys()) {
   console.log(key);
 }
 
 /* value 확인하기 */
-for (let value of myForm.values()) {
+for (let value of payload.values()) {
    console.log(value);
 }
 
