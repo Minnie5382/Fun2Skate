@@ -41,12 +41,22 @@ form.addEventListener('submit', (e) => {
   const uploaded_file = fileInput.files[0];
 
   payload.append("profileImg", uploaded_file);
-  console.log(payload);
+  console.log(payload.values);
 
   const requestOptions = {
     method: 'POST',
     body: payload
   };
+
+  /* key 확인하기 */
+for (let key of myForm.keys()) {
+  console.log(key);
+}
+
+/* value 확인하기 */
+for (let value of myForm.values()) {
+   console.log(value);
+}
 
   e.preventDefault();
 
