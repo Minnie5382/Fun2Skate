@@ -31,6 +31,21 @@ $(document).ready(function() {
   });
 });
 
+// 첨부파일 용량 제한
+$("#file_upload").off().on("change", function(){
+	if (this.files && this.files[0]) {
+
+		var maxSize = 3 * 1024 * 1024;
+		var fileSize = this.files[0].size;
+
+		if(fileSize > maxSize){
+			alert("첨부파일 사이즈는 3MB 이내로 등록 가능합니다.");
+			$(this).val('');
+			return false;
+		}
+	}
+});
+
 
 // 제출 시 지원서 이메일 전송
 form.addEventListener('submit', (e) => {
