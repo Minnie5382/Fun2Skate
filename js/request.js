@@ -50,7 +50,7 @@ form.addEventListener('submit', (e) => {
           alert("Your submission is complete! \n" + 
           "We'll contact you within 24 hours.\n" + 
           "제출이 완료되었습니다. 24시간 이내로 연락드리겠습니다.");
-          window.location.href = './index.html';
+          window.location.replace('./index.html');
           // e.preventDefault();
         } else {
           alert("We have a problem. Try again from the beginning, or contact the administrator.\n" + 
