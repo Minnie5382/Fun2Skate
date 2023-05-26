@@ -48,6 +48,8 @@ form.addEventListener('submit', (e) => {
     body: payload
   };
 
+  e.preventDefault();
+
   // handleRequest(`${backendServerUrl}/instructors/apply`, requestOptions)
   //   .then(function(data) {
   //     if(data.isSuccess) {
@@ -65,20 +67,20 @@ form.addEventListener('submit', (e) => {
 
 });
 
-// 이메일 형식 검증 함수
-function email_check( email ) {    
-    var regex=/([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    return (email != '' && email != 'undefined' && regex.test(email)); 
-}
+// // 이메일 형식 검증 함수
+// function email_check( email ) {    
+//     var regex=/([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+//     return (email != '' && email != 'undefined' && regex.test(email)); 
+// }
 
-$("input[type=email]").blur(function(){
-  var email = $(this).val();
-  if( email == '' || email == 'undefined') return;
-  if(! email_check(email) ) {
-  	$(".result-email").text('Invalid email form.');
-    $(this).focus();
-    return false;
-  }else {
-	$(".result-email").text('');
-  }
-});
+// $("input[type=email]").blur(function(){
+//   var email = $(this).val();
+//   if( email == '' || email == 'undefined') return;
+//   if(! email_check(email) ) {
+//   	$(".result-email").text('Invalid email form.');
+//     $(this).focus();
+//     return false;
+//   }else {
+// 	$(".result-email").text('');
+//   }
+// });
