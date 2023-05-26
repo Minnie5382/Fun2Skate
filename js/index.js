@@ -50,7 +50,7 @@ $(function() {
           var name = data.result[i].name;
           var profileImgPath = data.result[i].profileImgPath;
 
-          text += '<div class="memberwrap"> \n';
+          text += '<div class="member_wrap"> \n';
           text += '<a href="#' + instrIdx + '" id="modal' + instrIdx + ' " class="profile_wrap"> \n';
           text += '<img src="' + profileImgPath + '"  class="profile_image" alt="' + name + '프로필 이미지"> \n' ;
           text += '<span class="name">' + name + '\n</span> \n' ;
