@@ -40,7 +40,7 @@ form.addEventListener('submit', (e) => {
 
   const uploaded_file = fileInput.files[0];
 
-  payload.append("ProfileImg", uploaded_file);
+  payload.append("profileImg", uploaded_file);
   console.log(uploaded_file);
 
   const requestOptions = {
