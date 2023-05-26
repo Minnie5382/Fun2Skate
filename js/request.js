@@ -44,7 +44,10 @@ form.addEventListener('submit', (e) => {
       // },
       body: payload
     };
-    handleRequest(backendServerUrl + '/email', requestOptions)
+    fetch(backendServerUrl + '/email', {
+      method: 'POST',
+      body: payload
+    })
       // .then(res => res.json())
       .then(function(data) { 
         console.log("data : " + data);
