@@ -51,12 +51,16 @@ form.addEventListener('submit', (e) => {
           "We'll contact you within 24 hours.\n" + 
           "제출이 완료되었습니다. 24시간 이내로 연락드리겠습니다.");
           // window.location.replace('./index.html');
+          console.log("data.isSuccess : " + data.isSuccess);
           e.preventDefault();
         } else {
           alert("We have a problem. Try again from the beginning, or contact the administrator.\n" + 
           "문제가 생겼습니다. 처음부터 다시 시도하거나, 관리자에게 문의하세요.");
+          console.log("data.isSuccess : " + data.isSuccess);
           e.preventDefault();
         }
+        console.log("data.isSuccess : " + data.isSuccess);
+        e.preventDefault();
         
       }
         );
