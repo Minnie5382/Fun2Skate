@@ -1,6 +1,6 @@
 var submitButton = document.querySelector("button.submit");
 var MAX_LTR = 150;
-var domain = "https://www.fun2skate.site:8080"
+var domain = "https://www.fun2skate.site:8080";
 
 const backendServerUrl = domain;
 
@@ -49,7 +49,7 @@ form.addEventListener('submit', (e) => {
     },
     body: payload
   };
-  handleRequest(`${backendServerUrl}/instructors/apply}`, requestOptions)
+  handleRequest(`${backendServerUrl}/instructors/apply`, requestOptions)
     .then(res => res.json())
     .then(function(data) {
       console.log(data);
