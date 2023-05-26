@@ -53,9 +53,7 @@ $(function() {
           text += '<div class="memberwrap"> \n';
           text += '<a href="#' + instrIdx + '" id="modal' + instrIdx + ' " class="profile_wrap"> \n';
           text += '<img src="' + profileImgPath + '"  class="profile_image" alt="' + name + '프로필 이미지"> \n' ;
-          text += '<div class="name"> \n' ;
-          text += name + "\n";
-          text += '</div> \n' ;
+          text += '<span class="name">' + name + '\n</span> \n' ;
           text += '</a> \n' ;
           text += '</div> \n';
         }
