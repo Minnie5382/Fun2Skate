@@ -1,5 +1,5 @@
 var MAX_LTR = 500;
-var domain = "http://fun2skate.site:8080"
+var domain = "https://www.fun2skate.site:8080"
 
 const backendServerUrl = domain;
 
