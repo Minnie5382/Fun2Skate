@@ -73,6 +73,11 @@ form.addEventListener('submit', (e) => {
     .then(() => {
       localStorage.clear();
     })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+
+  e.preventDefault();
 
 });
 
