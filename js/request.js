@@ -43,8 +43,7 @@ form.addEventListener('submit', (e) => {
     };
     handleRequest(`${backendServerUrl}/email`, requestOptions)
       .then(function(data) { 
-        console.log("data : " + data);
-        console.log("data.isSuccess : " + data.isSuccess);
+        e.preventDefault();
         if(data.isSuccess) {
           alert("Your submission is complete! \n" + 
           "We'll contact you within 24 hours.\n" + 

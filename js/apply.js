@@ -50,7 +50,7 @@ $("#file_upload").off().on("change", function(){
 // 제출 시 지원서 이메일 전송
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  alert("처리 중입니다. 이 작업은 최대 1분 정도 소요될 수 있습니다.");
+  // alert("처리 중입니다. 이 작업은 최대 1분 정도 소요될 수 있습니다.");
   const fileInput = document.getElementById("file_upload");
   var myForm = document.getElementById('form');
   var payload = new FormData(myForm);
@@ -60,20 +60,19 @@ form.addEventListener('submit', (e) => {
   payload.append("profileImg", uploaded_file);
   console.log(payload.values);
 
+  // /* key 확인하기 */
+  // for (let key of payload.keys()) {
+  //   console.log(key);
+  // }
+
+  // /* value 확인하기 */
+  // for (let value of payload.values()) {
+  //   console.log(value);
+  // }
   const requestOptions = {
     method: 'POST',
     body: payload
   };
-
-    /* key 확인하기 */
-for (let key of payload.keys()) {
-  console.log(key);
-}
-
-/* value 확인하기 */
-for (let value of payload.values()) {
-   console.log(value);
-}
 
   handleRequest(`${backendServerUrl}/instructors/apply`, requestOptions)
     .then(function(data) {
@@ -81,7 +80,8 @@ for (let value of payload.values()) {
         alert("Your submission is complete! \n" + 
         "We'll contact you within 24 hours.\n" + 
         "제출이 완료되었습니다. 24시간 이내로 연락드리겠습니다.");
-        location.href='index.html';
+        window.location.replace('index.html');
+        e.preventDefault();
       } else {
         alert("We have a problem. Try again from the beginning, or contact the administrator.\n" + 
         "문제가 생겼습니다. 처음부터 다시 시도하거나, 관리자에게 문의하세요.");
