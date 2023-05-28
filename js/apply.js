@@ -66,7 +66,7 @@ form.addEventListener('submit', (e) => {
   // for (let value of payload.values()) {
   //   console.log(value);
   // }
-  
+
   const requestOptions = {
     method: 'POST',
     body: payload
@@ -75,12 +75,13 @@ form.addEventListener('submit', (e) => {
   handleRequest(`${backendServerUrl}/instructors/apply`, requestOptions)
     .then(function(data) {
       if(data.isSuccess) {
+        e.preventDefault();
         alert("Your submission is complete! \n" + 
         "We'll contact you within 24 hours.\n" + 
         "제출이 완료되었습니다. 24시간 이내로 연락드리겠습니다.");
         window.location.replace('index.html');
-        e.preventDefault();
       } else {
+        e.preventDefault();
         alert("We have a problem. Try again from the beginning, or contact the administrator.\n" + 
         "문제가 생겼습니다. 처음부터 다시 시도하거나, 관리자에게 문의하세요.");
         e.preventDefault();
