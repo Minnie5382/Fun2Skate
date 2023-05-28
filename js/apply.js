@@ -2,19 +2,6 @@ var submitButton = document.querySelector("button.submit");
 var MAX_LTR = 150;
 var backendServerUrl = "https://www.fun2skate.site:8080";
 
-function handleRequest(url, options) {
-  return fetch(url, options)
-    .then(response => {
-      e.preventDefault();
-      if (!response.ok) {
-        // e.preventDefault();
-        // alert("We have a problem. Try again from the beginning, or contact the administrator.\n" + 
-        // "문제가 생겼습니다. 처음부터 다시 시도하거나, 관리자에게 문의하세요.");
-      }
-      return response.json();
-    })
-}
-
 
 // 메시지 박스 글자수 제한 기능
 $(document).ready(function() {
@@ -69,8 +56,9 @@ form.addEventListener('submit', (e) => {
     body: payload
   };
 
-  handleRequest(`${backendServerUrl}/instructors/apply`, requestOptions)
-    .then(function(data) {
+  fetch(`${backendServerUrl}/instructors/apply`, requestOptions)
+    .then(res => res.json())
+    .then(data => {
       e.preventDefault();
       if(data.isSuccess) {
         alert("Your submission is complete! \n" + 

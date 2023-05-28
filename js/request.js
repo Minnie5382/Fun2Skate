@@ -1,22 +1,5 @@
 var MAX_LTR = 500;
-var domain = "https://www.fun2skate.site:8080";
-
-const backendServerUrl = domain;
-
-// handleREquest 함수 선언
-function handleRequest(url, options) {
-  e.preventDefault();
-  return fetch(url, options)
-    .then(response => {
-      e.preventDefault();
-      if (!response.ok) {
-        // e.preventDefault();
-        // alert("We have a problem. Try again from the beginning, or contact the administrator.\n" + 
-        // "문제가 생겼습니다. 처음부터 다시 시도하거나, 관리자에게 문의하세요.");
-      }
-      return response.json();
-    })
-}
+var backendServerUrl = "https://www.fun2skate.site:8080";
 
 // 메시지 박스 글자수 카운트
 $(document).ready(function() {
@@ -41,9 +24,9 @@ form.addEventListener('submit', (e) => {
       body: payload
     };
 
-  handleRequest(`${backendServerUrl}/email`, requestOptions)
-    .then(data.json)
-    .then(function(data) {
+  fetch(`${backendServerUrl}/email`, requestOptions)
+    .then(res => res.json())
+    .then(data => {
       e.preventDefault();
       if(data.isSuccess) {
         alert("Your submission is complete! \n" + 
