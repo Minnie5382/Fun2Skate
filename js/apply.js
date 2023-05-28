@@ -49,8 +49,6 @@ $("#file_upload").off().on("change", function(){
 
 // 제출 시 지원서 이메일 전송
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  // alert("처리 중입니다. 이 작업은 최대 1분 정도 소요될 수 있습니다.");
   const fileInput = document.getElementById("file_upload");
   var myForm = document.getElementById('form');
   var payload = new FormData(myForm);
@@ -58,7 +56,6 @@ form.addEventListener('submit', (e) => {
   const uploaded_file = fileInput.files[0];
 
   payload.append("profileImg", uploaded_file);
-  console.log(payload.values);
 
   // /* key 확인하기 */
   // for (let key of payload.keys()) {
@@ -69,6 +66,7 @@ form.addEventListener('submit', (e) => {
   // for (let value of payload.values()) {
   //   console.log(value);
   // }
+  
   const requestOptions = {
     method: 'POST',
     body: payload
