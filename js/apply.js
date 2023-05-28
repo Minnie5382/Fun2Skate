@@ -8,9 +8,9 @@ function handleRequest(url, options) {
   return fetch(url, options)
     .then(response => {
       if (!response.ok) {
-        e.preventDefault();
-        alert("We have a problem. Try again from the beginning, or contact the administrator.\n" + 
-        "문제가 생겼습니다. 처음부터 다시 시도하거나, 관리자에게 문의하세요.");
+        // e.preventDefault();
+        // alert("We have a problem. Try again from the beginning, or contact the administrator.\n" + 
+        // "문제가 생겼습니다. 처음부터 다시 시도하거나, 관리자에게 문의하세요.");
       }
       return response;
     })
