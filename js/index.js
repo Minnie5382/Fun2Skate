@@ -8,8 +8,6 @@ var domain = "https://www.fun2skate.site:8080"
 $(document).on("click", "button.contact", function() {
     var clicked_button_id = $(this).parents("div.profile_card").attr("id");
     localStorage.setItem("instrIdx", clicked_button_id);
-    // console.log("localStorage.getItem('instrIdx') : " + localStorage.getItem("instrIdx"));
-
     location.href='./request.html#page';
 });
 
@@ -34,7 +32,6 @@ $(function() {
   $(".map_wrap img.pin").click(function() {
     var clicked_pin_city = $(this).attr("id");
     document.querySelector("span.city").innerHTML = clicked_pin_city;
-    // console.log(clicked_pin_city);
     modal.style.display = "flex";
     const requestOptions = {
       method: 'GET',

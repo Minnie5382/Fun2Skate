@@ -41,16 +41,6 @@ form.addEventListener('submit', (e) => {
 
   payload.append("profileImg", uploaded_file);
 
-  // /* key 확인하기 */
-  // for (let key of payload.keys()) {
-  //   console.log(key);
-  // }
-
-  // /* value 확인하기 */
-  // for (let value of payload.values()) {
-  //   console.log(value);
-  // }
-
   const requestOptions = {
     method: 'POST',
     body: payload
@@ -86,21 +76,3 @@ form.addEventListener('submit', (e) => {
   loading.style.display = "flex";
 }
 );
-
-// // 이메일 형식 검증 함수
-// function email_check( email ) {    
-//     var regex=/([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-//     return (email != '' && email != 'undefined' && regex.test(email)); 
-// }
-
-// $("input[type=email]").blur(function(){
-//   var email = $(this).val();
-//   if( email == '' || email == 'undefined') return;
-//   if(! email_check(email) ) {
-//   	$(".result-email").text('Invalid email form.');
-//     $(this).focus();
-//     return false;
-//   }else {
-// 	$(".result-email").text('');
-//   }
-// });
