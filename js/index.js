@@ -20,7 +20,7 @@ function handleRequest(url, options) {
       if (!response.ok) {
         throw new Error('Request failed');
       }
-      return response.json();
+      return response;
     })
     .catch(error => {
       console.error(error);
