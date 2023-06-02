@@ -41,13 +41,13 @@ $(function() {
     };
     handleRequest(`${backendServerUrl}/instructors/${clicked_pin_city}`, requestOptions)
       .then(data => {
+        var text = "";
         for(var i = 0; i < data.result.length; i++) {
           var instrIdx = data.result[i].instrIdx;
           var name = data.result[i].name;
           var profileImgPath = data.result[i].profileImgPath;
 
           {
-            var text = "";
             text += '<div class="member_wrap"> \n';
             text += '<a href="#' + instrIdx + '" id="modal' + instrIdx + ' " class="profile_wrap"> \n';
             text += '<img src="' + profileImgPath + '"  class="profile_image" alt="' + name + '프로필 이미지"> \n' ;
