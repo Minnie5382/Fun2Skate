@@ -20,7 +20,7 @@ function handleRequest(url, options) {
       if (!response.ok) {
         throw new Error('Request failed');
       }
-      return response;
+      return response.json();
     })
     .catch(error => {
       console.error(error);
@@ -39,7 +39,7 @@ $(function() {
         'Content-Type': 'application/json',
       }
     };
-    handleRequest(`${backendServerUrl}/instructors/${clicked_pin_city}`, requestOptions)
+    fetch(`${backendServerUrl}/instructors/${clicked_pin_city}`, requestOptions)
       .then(data => {
         var text = "";
         for(var i = 0; i < data.result.length; i++) {
